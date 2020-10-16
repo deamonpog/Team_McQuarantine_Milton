@@ -23,6 +23,21 @@ The **purpose** of the research is to determine is UCF football game attendance 
 Discuss briefly about published matter that technically relates to your proposed work in 4-5 paragraphs.
 
 ## 4. Research Method
+### Overview
+The methodology seeks to establish the baseline COVID transmission risk with current attendee mitigation strategies (25% capacity, zone segregation). Followed by testing to identify at what attendance threshold and combination of mitigation strategies allow for increased home game attendance without increasing COVID transmission risk.
+  
+The participants for our experiment are simulated football game attendees using anylogic. One mitigation strategy for UCF home games is segregating the stadium into seven unilateral sections that cannot interact with each other, which means that each section has its own entry/exit, bathrooms, and concessions. Our population consists of 25% capacity of one such section, a total of 1,618 simulated spectators. We may increase the simulated population depending upon our capability to increase the simulation scope as we continue to build the model. The simulation agents are unique to our study in two ways. First, the agents will have a 6 ft. boundary around each that will help us measure the number of contacts each agent has with other agents. Second, the agents will be capable of being a part of different sized groups, a transmission variable we plan to test.  
+
+Our primary tool is anylogic. We plan to construct an agent-based simulation that allows us to adjust the population, movement patterns, and group sizes. The primary output of our agent base simulation is to identify the number of contacts between unique agents. The agent contact data will inform the Ro value in a separate SIR simulation to provide infection statistics under changing variables.  
+
+The dependent variables for our experiment are the number of agent contacts and attendee infection rate. Independent variables are the attendance capacity and attendee group sizes. Our control variable is mask wearing as a function of Ro. A draft table of our experiment framework is below. 
+
+![results table](Images/resultstable.png)
+
+The experiment process follows the table above. Data will be collected using anylogic analytics and include agent contact statistics and infection statistics based on research-informed 
+Ro values and the initial value of the SIR infection. In addition to the statistical analysis, we will complete each simulation trial with a heatmap that identifies high agent contact areas. 
+Depending on experimental findings and capabilities, we may add a final phase to the experiment that finds the optimal attendance capacity and group size limitations that maximizes COVID attendance 
+with no increase in infection rates. 
 
 ### 4.1 Reseach Questions
 
@@ -75,7 +90,7 @@ Masked interpersonal transmission rate
  [![PPT images](Images/MidtermPPT.png)](Presentations)
 
 
-## References
+## References (unformated right now)
 (Add the bibliographic references you intend to use in format you want)
 
 https://www.orlandosentinel.com/sports/ucf-knights/os-sp-ucf-athletics-budget-fundraising-20200723-uxpaa6gjlffmpdfpoc6jikag4m-story.html
@@ -83,6 +98,23 @@ https://www.orlandosentinel.com/sports/ucf-knights/os-sp-ucf-athletics-budget-fu
 https://www.ucf.edu/news/what-fans-need-to-know-for-ucfs-2020-football-season/
 
 https://sports.usatoday.com/2020/07/05/methodology-for-2019-ncaa-athletic-department-revenue-database/
+
+Ronald, N., Sterling, L., & Kirley, M. (2007). An agent-based approach to modelling pedestrian behaviour. International Journal of Simulation, 8(1), 25-38.
+
+Siyam, N., Alqaryouti, O., & Abdallah, S. (2019). Research Issues in Agent-Based Simulation for Pedestrians Evacuation. IEEE Access, 8, 134435-134455.
+
+Pathophysiology, Transmission, Diagnosis, and Treatment of Coronavirus Disease 2019 (COVID-19)” ( doi :10.1016/S0140-6736(20)31142-9 )
+
+Physical distancing, face masks, and eye protection to prevent person-to-person transmission of SARS-CoV-2 and COVID-19: a systematic review and meta-analysis” (doi : https://doi.org/10.1016/S0140-6736(20)31142-9) 
+
+Zhiming Fang1,#,*, Zhongyi Huang1,#, Xiaolian Li2,#,*, Jun Zhang3 , Wei Lv4 , Lei Zhuang5 , Xingpeng Xu1 , Nan Huang1 How many infections of COVID-19 there will be in the “Diamond Princess”- Predicted by a virus transmission model based on the simulation of crowd flow https://arxiv.org/ftp/arxiv/papers/2002/2002.10616.pdf 
+
+Anass Bouchnita ∗, Aissam Jebrane “A hybrid multi-scale model of COVID-19 transmission dynamics to assess the potential of non-pharmaceutical interventions” https://www.sciencedirect.com/science/article/pii/S0960077920303404?casa_token=It_NawpEwfUAAAAA:yOCsDOdT_8y1PFQ2cypB6o1IQRARaAfBFGCkl0OMqnq1_ibmzLBTY7tJ2FAwBaDBzdj1kIvNKA 
+
+Marco D’Orazio1 , Gabriele Bernardini1 , Enrico Quagliarini1  How to restart? An agent-based simulation model towards the definition of strategies for COVID-19 “second phase” in public buildings https://arxiv.org/ftp/arxiv/papers/2004/2004.12927.pdf 
+
+
+
 
 
 
