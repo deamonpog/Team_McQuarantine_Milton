@@ -72,7 +72,7 @@ Masked interpersonal transmission rate
 ## PPT
 
 **Midterm PowerPoint**
- [![PPT images](Images/MidtermPPT.png)](Presentations/IDS _6916_Midterm.pdf)
+ [![PPT images](Images/MidtermPPT.png)](Presentations)
 
 
 ## References
