@@ -3,7 +3,7 @@
 
 > * Group Name: Team McQuarantine Milton
 > * Group participants names: Chathura Don Dimungu Arachchige, Bradley Brown, Devin Inthavongsa, and Mathew Rubio
-> * Project Title: UCF 2020 Football Season Home Game Spectator COVD Transmission 
+> * Project Title: UCF 2020 Football Season Home Game Spectator COVD Transmission
 
 ## 1. Topic / Introduction
 
@@ -20,24 +20,30 @@ The **purpose** of the research is to determine is UCF football game attendance 
 
 ## 3. Related Work/Review
 
-Discuss briefly about published matter that technically relates to your proposed work in 4-5 paragraphs.
+Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) causes COVID-19, and its mechanism of spreading is primarily driven through close person-to-person interaction. Ongoing studies and analyses of previous epidemiological data are currently underway in predicting the infection mechanism and rate of SARS-CoV-2. It is not definitely known if SARS-CoV-2 might spread through aerosols from respiratory droplets so far; sampling the air has found viral replicative material (viral RNA) in some studies, but not in others. However, finding viral RNA is not necessarily indicative of the virus' replicative and infective potential. Furthermore, the distance from which an infected individual infects another individual, as well as the optimal person-to-person physical distance, is uncertain. Because of such, quantitative assessment of physical distancing is essential in determining safe interaction in healthcare settings, non-healthcare settings, and providing important information for health policy-makers in preventing the spread of the virus.
+
+Chu et al. (2020) published a large meta-analysis paper identifying 172 observational studies across 16 countries, with no randomized controlled trials and 44 relevant comparative studies in both healthcare and non-healthcare settings. The findings of this paper is one of the first to rapidly gather all direct information on COVID-19, and provide the best available evidence to inform optimal usages of common and simple interventions to aid in the reduction of the rate of infection. Physical distancing of 1 meter or more was associated with a drastically lowered risk of infection, as was the usage of face masks including N95 respirators and surgical masks. The authors found evidence of moderate certainty that currently placed policies of at least 1 meter physical distancing are probably associated with a large reduction in infection rates, and further suggests that distances of 2 meter might be more effective (implemented in some countries). The primary limitation of this meta-analyses paper is that all the studies involved were non-randomized, not adjusted, and may suffer from recall and measurement bias.
+
+Jarvis et al. (2020) published a paper centered around the estimation of 'R naught' (R0) in the United Kingdom (UK). R0 is the potential transmission of a disease; R0 < 1 - each existing infection causes less than one new infection; R0 = 1 - each existing infection causes one new infection; R0 > 1 - each existing infection causes more than one new infection and may cause an outbreak or epidemic. The universally accepted R0 for SARS-CoV-2 is still uncertain, but this study seeks to establish some metric to base viral-spread interventions, especially through physical distancing measures that may lead to substantial decreases in contact levels. This study asked a representative sample of UK adults (1356 UK participants) about their contact patterns on the day prior and recorded 3849 contacts. The estimation of R0 prior to lockdown (in the UK) was 2.6, and the authors found that, under current social distancing measures, the current R0 estimation was lowered to 0.62 based on all types of contact.
+
+[Placeholder for 4th paragraph] 
 
 ## 4. Research Method
 ### Overview
 The methodology seeks to establish the baseline COVID transmission risk with current attendee mitigation strategies (25% capacity, zone segregation). Followed by testing to identify at what attendance threshold and combination of mitigation strategies allow for increased home game attendance without increasing COVID transmission risk.
-  
+
 The participants for our experiment are simulated football game attendees using anylogic. One mitigation strategy for UCF home games is segregating the stadium into seven unilateral sections that cannot interact with each other, which means that each section has its own entry/exit, bathrooms, and concessions. Our population consists of 25% capacity of one such section, a total of 1,618 simulated spectators. We may increase the simulated population depending upon our capability to increase the simulation scope as we continue to build the model. The simulation agents are unique to our study in two ways. First, the agents will have a 6 ft. boundary around each that will help us measure the number of contacts each agent has with other agents. Second, the agents will be capable of being a part of different sized groups, a transmission variable we plan to test.  
 
 Our primary tool is anylogic. We plan to construct an agent-based simulation that allows us to adjust the population, movement patterns, and group sizes. The primary output of our agent base simulation is to identify the number of contacts between unique agents. The agent contact data will inform the Ro value in a separate SIR simulation to provide infection statistics under changing variables.  
 
-The dependent variables for our experiment are the number of agent contacts and attendee infection rate. Independent variables are the attendance capacity and attendee group sizes. Our control variable is mask wearing as a function of Ro. A draft table of our experiment framework is below. 
+The dependent variables for our experiment are the number of agent contacts and attendee infection rate. Independent variables are the attendance capacity and attendee group sizes. Our control variable is mask wearing as a function of Ro. A draft table of our experiment framework is below.
 
 ![results table](Images/resultstable.png)
 
-The experiment process follows the table above. Data will be collected using anylogic analytics and include agent contact statistics and infection statistics based on research-informed 
-Ro values and the initial value of the SIR infection. In addition to the statistical analysis, we will complete each simulation trial with a heatmap that identifies high agent contact areas. 
-Depending on experimental findings and capabilities, we may add a final phase to the experiment that finds the optimal attendance capacity and group size limitations that maximizes COVID attendance 
-with no increase in infection rates. 
+The experiment process follows the table above. Data will be collected using anylogic analytics and include agent contact statistics and infection statistics based on research-informed
+Ro values and the initial value of the SIR infection. In addition to the statistical analysis, we will complete each simulation trial with a heatmap that identifies high agent contact areas.
+Depending on experimental findings and capabilities, we may add a final phase to the experiment that finds the optimal attendance capacity and group size limitations that maximizes COVID attendance
+with no increase in infection rates.
 
 ### 4.1 Reseach Questions
 
@@ -105,18 +111,10 @@ Siyam, N., Alqaryouti, O., & Abdallah, S. (2019). Research Issues in Agent-Based
 
 Pathophysiology, Transmission, Diagnosis, and Treatment of Coronavirus Disease 2019 (COVID-19)” ( doi :10.1016/S0140-6736(20)31142-9 )
 
-Physical distancing, face masks, and eye protection to prevent person-to-person transmission of SARS-CoV-2 and COVID-19: a systematic review and meta-analysis” (doi : https://doi.org/10.1016/S0140-6736(20)31142-9) 
+Physical distancing, face masks, and eye protection to prevent person-to-person transmission of SARS-CoV-2 and COVID-19: a systematic review and meta-analysis” (doi : https://doi.org/10.1016/S0140-6736(20)31142-9)
 
-Zhiming Fang1,#,*, Zhongyi Huang1,#, Xiaolian Li2,#,*, Jun Zhang3 , Wei Lv4 , Lei Zhuang5 , Xingpeng Xu1 , Nan Huang1 How many infections of COVID-19 there will be in the “Diamond Princess”- Predicted by a virus transmission model based on the simulation of crowd flow https://arxiv.org/ftp/arxiv/papers/2002/2002.10616.pdf 
+Zhiming Fang1,#,*, Zhongyi Huang1,#, Xiaolian Li2,#,*, Jun Zhang3 , Wei Lv4 , Lei Zhuang5 , Xingpeng Xu1 , Nan Huang1 How many infections of COVID-19 there will be in the “Diamond Princess”- Predicted by a virus transmission model based on the simulation of crowd flow https://arxiv.org/ftp/arxiv/papers/2002/2002.10616.pdf
 
-Anass Bouchnita ∗, Aissam Jebrane “A hybrid multi-scale model of COVID-19 transmission dynamics to assess the potential of non-pharmaceutical interventions” https://www.sciencedirect.com/science/article/pii/S0960077920303404?casa_token=It_NawpEwfUAAAAA:yOCsDOdT_8y1PFQ2cypB6o1IQRARaAfBFGCkl0OMqnq1_ibmzLBTY7tJ2FAwBaDBzdj1kIvNKA 
+Anass Bouchnita ∗, Aissam Jebrane “A hybrid multi-scale model of COVID-19 transmission dynamics to assess the potential of non-pharmaceutical interventions” https://www.sciencedirect.com/science/article/pii/S0960077920303404?casa_token=It_NawpEwfUAAAAA:yOCsDOdT_8y1PFQ2cypB6o1IQRARaAfBFGCkl0OMqnq1_ibmzLBTY7tJ2FAwBaDBzdj1kIvNKA
 
-Marco D’Orazio1 , Gabriele Bernardini1 , Enrico Quagliarini1  How to restart? An agent-based simulation model towards the definition of strategies for COVID-19 “second phase” in public buildings https://arxiv.org/ftp/arxiv/papers/2004/2004.12927.pdf 
-
-
-
-
-
-
-
-
+Marco D’Orazio1 , Gabriele Bernardini1 , Enrico Quagliarini1  How to restart? An agent-based simulation model towards the definition of strategies for COVID-19 “second phase” in public buildings https://arxiv.org/ftp/arxiv/papers/2004/2004.12927.pdf
