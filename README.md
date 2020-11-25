@@ -118,3 +118,5 @@ Zhiming Fang1,#,*, Zhongyi Huang1,#, Xiaolian Li2,#,*, Jun Zhang3 , Wei Lv4 , Le
 Anass Bouchnita ∗, Aissam Jebrane “A hybrid multi-scale model of COVID-19 transmission dynamics to assess the potential of non-pharmaceutical interventions” https://www.sciencedirect.com/science/article/pii/S0960077920303404?casa_token=It_NawpEwfUAAAAA:yOCsDOdT_8y1PFQ2cypB6o1IQRARaAfBFGCkl0OMqnq1_ibmzLBTY7tJ2FAwBaDBzdj1kIvNKA
 
 Marco D’Orazio1 , Gabriele Bernardini1 , Enrico Quagliarini1  How to restart? An agent-based simulation model towards the definition of strategies for COVID-19 “second phase” in public buildings https://arxiv.org/ftp/arxiv/papers/2004/2004.12927.pdf
+
+Jarvis, C.I., Van Zandvoort, K., Gimma, A. et al. Quantifying the impact of physical distance measures on the transmission of COVID-19 in the UK. BMC Med 18, 124 (2020). https://doi.org/10.1186/s12916-020-01597-8 
