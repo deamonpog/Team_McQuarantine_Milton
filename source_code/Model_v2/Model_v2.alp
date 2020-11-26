@@ -122,9 +122,50 @@ System.out.println(presentation.getLevel().getTargetLines().size());]]></BeforeS
 				<Scale>10</Scale>
 				<InheritedFromParentAgentType>true</InheritedFromParentAgentType>
 			</ScaleRuler>
-			<CurrentLevel>1602536067440</CurrentLevel>
+			<CurrentLevel>1602429198898</CurrentLevel>
 			<ConnectionsId>1602429198894</ConnectionsId>
 			<Variables>
+				<Variable Class="PlainVariable">
+					<Id>1604511125287</Id>
+					<Name><![CDATA[numContacts]]></Name>
+					<Description><![CDATA[Number of contacts detected.]]></Description>
+					<X>-1350</X><Y>370</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[int]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1604510829958</Id>
+					<Name><![CDATA[contactDistance]]></Name>
+					<Description><![CDATA[Contact distance in (yards * pixels per yard).]]></Description>
+					<X>-1350</X><Y>330</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[20]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1604510829956</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
 				<Variable Class="CollectionVariable">
 					<Id>1602614302341</Id>
 					<Name><![CDATA[col_Benches]]></Name>
@@ -343,7 +384,7 @@ System.out.println(presentation.getLevel().getTargetLines().size());]]></BeforeS
 				<Connector>
 					<Id>1602612678526</Id>
 					<Name><![CDATA[connector11]]></Name>
-					<X>-770.27</X><Y>280</Y>
+					<X>-800.27</X><Y>280</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -370,7 +411,7 @@ System.out.println(presentation.getLevel().getTargetLines().size());]]></BeforeS
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>70</X><Y>0</Y></Point>
+						<Point><X>110</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -479,7 +520,7 @@ System.out.println(presentation.getLevel().getTargetLines().size());]]></BeforeS
 				<Connector>
 					<Id>1602622610979</Id>
 					<Name><![CDATA[connector7]]></Name>
-					<X>-660</X><Y>280</Y>
+					<X>-650</X><Y>280</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -506,11 +547,11 @@ System.out.println(presentation.getLevel().getTargetLines().size());]]></BeforeS
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>100</X><Y>0</Y></Point>
-						<Point><X>100</X><Y>120</Y></Point>
-						<Point><X>-700</X><Y>120</Y></Point>
-						<Point><X>-700</X><Y>200</Y></Point>
-						<Point><X>-660</X><Y>200</Y></Point>
+						<Point><X>90</X><Y>0</Y></Point>
+						<Point><X>90</X><Y>120</Y></Point>
+						<Point><X>-710</X><Y>120</Y></Point>
+						<Point><X>-710</X><Y>200</Y></Point>
+						<Point><X>-670</X><Y>200</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -850,7 +891,7 @@ System.out.println(presentation.getLevel().getTargetLines().size());]]></BeforeS
 				<Connector>
 					<Id>1602702162744</Id>
 					<Name><![CDATA[connector8]]></Name>
-					<X>0</X><Y>0</Y>
+					<X>-840</X><Y>280</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -876,8 +917,8 @@ System.out.println(presentation.getLevel().getTargetLines().size());]]></BeforeS
 						<ItemName><![CDATA[out]]></ItemName>
 					</TargetConnectableItemReference>
 					<Points>
-						<Point><X>-810</X><Y>280</Y></Point>
-						<Point><X>-890</X><Y>280</Y></Point>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-50</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -946,6 +987,53 @@ System.out.println(presentation.getLevel().getTargetLines().size());]]></BeforeS
 					</Properties>
 					<Action><![CDATA[watchMatch.freeAllWaitingPeds();
 watchMatch.freeAll();]]></Action>
+				</Event>
+				<Event>
+					<Id>1604509477288</Id>
+					<Name><![CDATA[checkContacts]]></Name>
+					<X>-1350</X><Y>290</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="cyclic">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1604563200000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[10]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[10]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[Iterator itr = getDefaultPopulation().iterator();
+Iterator itr2 = getDefaultPopulation().iterator();
+while(itr.hasNext()){
+	Object a = itr.next();
+	if (a instanceof MqFan){
+		MqFan mqfan = (MqFan)a;
+		while(itr2.hasNext()){
+			Object a2 = itr2.next();
+			if (a2 instanceof MqFan){
+				MqFan mqfan2 = (MqFan)a2;
+				if(contactDistance > mqfan.distanceTo(mqfan2)){
+					numContacts += 1;
+				}
+			}
+		}
+	}
+}]]></Action>
 				</Event>
 			</Events>
 			<Functions>
@@ -1153,6 +1241,10 @@ return top(available_benches, b -> (100000 - in_Fan.distanceByRoute(b)));
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[diameter]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[uniform(0.1, 0.2)]]></Code>
+								<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[createGroups]]></Name>
@@ -1829,7 +1921,7 @@ for(int i=0; i < group.size(); i++){
 				<EmbeddedObject>
 					<Id>1602539543751</Id>
 					<Name><![CDATA[watchMatch]]></Name>
-					<X>-700</X><Y>270</Y>
+					<X>-690</X><Y>270</Y>
 					<Label><X>-10</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1848,15 +1940,18 @@ for(int i=0; i < group.size(); i++){
 					<Parameters>
 						<Parameter>
 							<Name><![CDATA[locationType]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[locationArea]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[ped.targetBench.area]]></Code>
+								<Code><![CDATA[self.LOCATION_POINT]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
+							<Name><![CDATA[locationArea]]></Name>
+						</Parameter>
+						<Parameter>
 							<Name><![CDATA[attractorChoice]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[self.ATTRACTOR_CHOICE_FREE]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[attractor]]></Name>
@@ -1869,9 +1964,15 @@ for(int i=0; i < group.size(); i++){
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[locationX]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[ped.targetSeatPos.getX()]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[locationY]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[ped.targetSeatPos.getY()]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[delayType]]></Name>
@@ -1903,11 +2004,16 @@ for(int i=0; i < group.size(); i++){
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[ped.targetSeatPos = ped.targetBench.getRandomSeatPos();]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onBeginWait]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[ped.setSitStance(true);]]></Code>
+								<Code><![CDATA[ped.setSitStance(true);
+ped.setRotation(Math.PI/2);
+ped.stop();]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -2269,7 +2375,7 @@ if(ped.targetBench.hasUnOwnedSpot()){
 				<EmbeddedObject>
 					<Id>1602612512620</Id>
 					<Name><![CDATA[pedChangeLevel_bench]]></Name>
-					<X>-810</X><Y>270</Y>
+					<X>-840</X><Y>270</Y>
 					<Label><X>-35</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4028,7 +4134,7 @@ System.out.println("Rerouted: G:"+ped.theGroup.getId()+" T:"+ped.targetBench);]]
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[ped.text.setText("G"+ped.theGroup.getId()+":B"+ped.targetBench.getName()+"@"+ped.targetBench.seatingPos[ped.idx].getName());]]></Code>
+								<Code><![CDATA[ped.text.setText("G"+ped.theGroup.getId()+":B"+ped.targetBench.getName()+"@"+ped.targetBench.seatingPos[ped.idx]);]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -6136,6 +6242,24 @@ System.out.println("Rerouted: G:"+ped.theGroup.getId()+" T:"+ped.targetBench);]]
 						<Point><X>24.36</X><Y>73.62100000000001</Y><Z>0</Z></Point>
 					</Points>
 				</Wall>
+				<DensityMap>
+					<Id>1604527620436</Id>
+					<Name><![CDATA[densityMap]]></Name>
+					<X>-280</X><Y>1160</Y>
+					<Label><X>-15</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Width>10</Width>
+					<Height>200</Height>
+					<EnableAttenuation>true</EnableAttenuation>
+					<Transparency>0.25</Transparency>
+					<CriticalDensity>1.5</CriticalDensity>
+					<Type>PEDESTRIAN</Type>
+					<ColorScheme>LOGARITHMIC</ColorScheme>
+				</DensityMap>
 			</Presentation>
 
 				</Level>
@@ -6297,6 +6421,33 @@ orchid, violetRed, mediumVioletRed, deepPink, hotPink, paleVioletRed, lavenderBl
 						<InitialValue Class="CodeValue">
 							<Code><![CDATA[-1]]></Code>
 						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1604505733356</Id>
+					<Name><![CDATA[targetSeatPos]]></Name>
+					<X>50</X><Y>250</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[Point]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[new Point(5,10)]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1604510614900</Id>
+					<Name><![CDATA[collisionArea]]></Name>
+					<X>50</X><Y>300</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
 					</Properties>
 				</Variable>
 				<Variable Class="Parameter">
@@ -6713,9 +6864,9 @@ person_sitting.setColor("MA_Shape_003", c);]]></Body>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[Attractor[]]]></Type>        
+						<Type><![CDATA[boolean[]]]></Type>        
 						<InitialValue Class="CodeValue">
-							<Code><![CDATA[{attractor0, attractor1}]]></Code>
+							<Code><![CDATA[{false,false,false,false}]]></Code>
 						</InitialValue>
 					</Properties>
 				</Variable>
@@ -6829,6 +6980,43 @@ person_sitting.setColor("MA_Shape_003", c);]]></Body>
 						<Type><![CDATA[PedGroup]]></Type>
 					</Parameter>
 					<Body><![CDATA[theOwnerGroup = in_Owner;]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
+					<ReturnType><![CDATA[Point]]></ReturnType>
+					<Id>1604505141339</Id>
+					<Name><![CDATA[getRandomSeatPos]]></Name>
+					<X>-150</X><Y>80</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Body><![CDATA[int pickedPos = 0;
+int count = seatingPos.length;
+for(int i=0; i<seatingPos.length; i++){
+	if(seatingPos[i]){
+		count = count - 1;
+	}
+}
+if(count < 1){
+	System.err.println("COUNT LESS THAN PEOPLE");
+}
+double prob = 1.0 / count;
+double p = Math.random();
+double cumuProb = prob;
+for(int i=0; i<seatingPos.length; i++){
+	if(seatingPos[i] == false){
+		// seat available, check cumu-prob
+		if(p < cumuProb){
+			pickedPos = i;
+			break;
+		}else{
+			cumuProb += prob;
+		}
+	}
+}
+seatingPos[pickedPos] = true;
+return new Point(5,5 + 10 * pickedPos);]]></Body>
 				</Function>
 			</Functions>
 			<AgentLinks>
@@ -7101,6 +7289,9 @@ person_sitting.setColor("MA_Shape_003", c);]]></Body>
 			</Presentation>
 
 			<Parameters>			
+				<Parameter>
+					<ParameterName><![CDATA[contactDistance]]></ParameterName>
+				</Parameter>
 			</Parameters>			
 			<PresentationProperties>
 				<EnableZoomAndPanning>true</EnableZoomAndPanning>
