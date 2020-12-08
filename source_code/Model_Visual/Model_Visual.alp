@@ -7,9 +7,9 @@
 <AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.6.0.202008201438" AlpVersion="8.5.7">
 <Model>
 	<Id>1606943455758</Id>
-	<Name><![CDATA[Model_v5]]></Name>
+	<Name><![CDATA[Model_Visual]]></Name>
 	<EngineVersion>6</EngineVersion>
-	<JavaPackageName><![CDATA[model_v5]]></JavaPackageName>
+	<JavaPackageName><![CDATA[model_visual]]></JavaPackageName>
 	<ModelTimeUnit><![CDATA[Second]]></ModelTimeUnit>
 	<ActiveObjectClasses>
 		<!--   =========   Active Object Class   ========  -->
@@ -101,7 +101,12 @@ while(itr.hasNext()){
 		}
 	}
 }
-applyNetwork();]]></AfterStepCode>
+applyNetwork();
+
+mqFan.forEach((MqFan mqfan) -> {
+		st_inf_contacts.add(mqfan.numInfectiousContacts);
+		st_all_contacts.add(mqfan.numAllContacts);
+	});]]></AfterStepCode>
 					<SpaceType>CONTINUOUS</SpaceType>
 					<WidthCode><![CDATA[2500]]></WidthCode>
 					<HeightCode><![CDATA[3600]]></HeightCode>
@@ -310,7 +315,7 @@ applyNetwork();]]></AfterStepCode>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[30]]></Code>
+							<Code><![CDATA[270]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1607259709680</Id>
@@ -380,7 +385,7 @@ applyNetwork();]]></AfterStepCode>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[waitForTeam]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -390,7 +395,7 @@ applyNetwork();]]></AfterStepCode>
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[pedSource]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -413,7 +418,7 @@ applyNetwork();]]></AfterStepCode>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[pedService]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -423,7 +428,7 @@ applyNetwork();]]></AfterStepCode>
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[waitForTeam]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -446,7 +451,7 @@ applyNetwork();]]></AfterStepCode>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[pedSink]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -456,7 +461,7 @@ applyNetwork();]]></AfterStepCode>
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[pedGoTo]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -479,17 +484,17 @@ applyNetwork();]]></AfterStepCode>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[goUpStairs]]></ItemName>
 					</SourceEmbeddedObjectReference>
 					<SourceConnectableItemReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[GoUpStairs]]></ClassName>
 						<ItemName><![CDATA[port1]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[pedService]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -512,7 +517,7 @@ applyNetwork();]]></AfterStepCode>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[pedGoTo]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -522,12 +527,12 @@ applyNetwork();]]></AfterStepCode>
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[goDownStairs]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[GoDownStairs]]></ClassName>
 						<ItemName><![CDATA[port]]></ItemName>
 					</TargetConnectableItemReference>
@@ -545,7 +550,7 @@ applyNetwork();]]></AfterStepCode>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[goto_near_bench]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -555,12 +560,12 @@ applyNetwork();]]></AfterStepCode>
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[goUpStairs]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[GoUpStairs]]></ClassName>
 						<ItemName><![CDATA[port]]></ItemName>
 					</TargetConnectableItemReference>
@@ -578,7 +583,7 @@ applyNetwork();]]></AfterStepCode>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[pedEnter]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -588,7 +593,7 @@ applyNetwork();]]></AfterStepCode>
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[pedExit]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -611,17 +616,17 @@ applyNetwork();]]></AfterStepCode>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[goDownStairs]]></ItemName>
 					</SourceEmbeddedObjectReference>
 					<SourceConnectableItemReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[GoDownStairs]]></ClassName>
 						<ItemName><![CDATA[port1]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[pedEnter1]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -644,7 +649,7 @@ applyNetwork();]]></AfterStepCode>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[pedEnter1]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -654,7 +659,7 @@ applyNetwork();]]></AfterStepCode>
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[pedExit1]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -677,7 +682,7 @@ applyNetwork();]]></AfterStepCode>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[pedExit1]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -687,7 +692,7 @@ applyNetwork();]]></AfterStepCode>
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[goto_benchEnd]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -710,7 +715,7 @@ applyNetwork();]]></AfterStepCode>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[goto_benchEnd]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -720,7 +725,7 @@ applyNetwork();]]></AfterStepCode>
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[watchMatch]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -743,7 +748,7 @@ applyNetwork();]]></AfterStepCode>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[watchMatch]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -753,7 +758,7 @@ applyNetwork();]]></AfterStepCode>
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[pedEnter]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -776,7 +781,7 @@ applyNetwork();]]></AfterStepCode>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[checkAvailability]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -786,7 +791,7 @@ applyNetwork();]]></AfterStepCode>
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[bugfix]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -809,7 +814,7 @@ applyNetwork();]]></AfterStepCode>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[bugfix]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -819,7 +824,7 @@ applyNetwork();]]></AfterStepCode>
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[goto_near_bench]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -842,7 +847,7 @@ applyNetwork();]]></AfterStepCode>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[checkAvailability]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -852,7 +857,7 @@ applyNetwork();]]></AfterStepCode>
 						<ItemName><![CDATA[out2]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[goto_near_bench]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -879,7 +884,7 @@ applyNetwork();]]></AfterStepCode>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[pedExit]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -889,7 +894,7 @@ applyNetwork();]]></AfterStepCode>
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[goto_bench]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -912,7 +917,7 @@ applyNetwork();]]></AfterStepCode>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[goto_bench]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -922,7 +927,7 @@ applyNetwork();]]></AfterStepCode>
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[checkAvailability]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -1112,7 +1117,7 @@ watchMatch.freeAllWaitingPeds();]]></Action>
 					<ReturnType><![CDATA[double]]></ReturnType>
 					<Id>1607163170674</Id>
 					<Name><![CDATA[navigate]]></Name>
-					<X>-800</X><Y>-790</Y>
+					<X>-880</X><Y>-640</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1130,7 +1135,7 @@ panelGroup.setPos( viewArea.getX(), viewArea.getY() );]]></Body>
 					<ReturnType><![CDATA[double]]></ReturnType>
 					<Id>1607324509575</Id>
 					<Name><![CDATA[calculateDistance]]></Name>
-					<X>-700</X><Y>-790</Y>
+					<X>-900</X><Y>-610</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1156,16 +1161,16 @@ panelGroup.setPos( viewArea.getX(), viewArea.getY() );]]></Body>
 			</Functions>
 			<AnalysisData>
     			<Statistics>
-					<Id>1607313776121</Id>
-					<Name><![CDATA[stat_contacts]]></Name>
-					<X>-940</X><Y>-750</Y>
+					<Id>1607406319686</Id>
+					<Name><![CDATA[st_inf_contacts]]></Name>
+					<X>-1400</X><Y>80</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<AutoUpdate>false</AutoUpdate>
+					<AutoUpdate>true</AutoUpdate>
 					<OccurrenceAtTime>true</OccurrenceAtTime>
-					<OccurrenceDate>1607328000000</OccurrenceDate>
+					<OccurrenceDate>1607414400000</OccurrenceDate>
 					<OccurrenceTime Class="CodeUnitValue">
 						<Code><![CDATA[0]]></Code>
 						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
@@ -1176,17 +1181,17 @@ panelGroup.setPos( viewArea.getX(), viewArea.getY() );]]></Body>
 					</RecurrenceCode>
 					<Discrete>true</Discrete>
 				</Statistics>
-    			<HistogramData>
-					<Id>1607313785254</Id>
-					<Name><![CDATA[hdata_contacts]]></Name>
-					<X>-940</X><Y>-710</Y>
+    			<Statistics>
+					<Id>1607407561158</Id>
+					<Name><![CDATA[st_all_contacts]]></Name>
+					<X>-1400</X><Y>130</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<AutoUpdate>false</AutoUpdate>
+					<AutoUpdate>true</AutoUpdate>
 					<OccurrenceAtTime>true</OccurrenceAtTime>
-					<OccurrenceDate>1607328000000</OccurrenceDate>
+					<OccurrenceDate>1607414400000</OccurrenceDate>
 					<OccurrenceTime Class="CodeUnitValue">
 						<Code><![CDATA[0]]></Code>
 						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
@@ -1195,18 +1200,8 @@ panelGroup.setPos( viewArea.getX(), viewArea.getY() );]]></Body>
 						<Code><![CDATA[1]]></Code>
 						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 					</RecurrenceCode>
-					<Value><![CDATA[]]></Value>
-					<NumberOfIntervals>10</NumberOfIntervals>
-					<MinMaxAutodetect>true</MinMaxAutodetect>
-					<RangeMinExpression><![CDATA[0]]></RangeMinExpression>
-					<RangeMaxExpression><![CDATA[1]]></RangeMaxExpression>
-					<InitialIntervalSize><![CDATA[0.1]]></InitialIntervalSize>
-					<CalculateCDF>true</CalculateCDF>
-					<CalculatePercentiles>false</CalculatePercentiles>
-					<LowPercent>10</LowPercent>
-					<HighPercent>10</HighPercent>
-					<Title><![CDATA[]]></Title>
-				</HistogramData>
+					<Discrete>true</Discrete>
+				</Statistics>
 			</AnalysisData>
 			<AgentLinks>
 				<AgentLink>
@@ -1321,12 +1316,12 @@ panelGroup.setPos( viewArea.getX(), viewArea.getY() );]]></Body>
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
 									<ActiveObjectClass>
-										<PackageName><![CDATA[model_v5]]></PackageName>
+										<PackageName><![CDATA[model_visual]]></PackageName>
 										<ClassName><![CDATA[MqFan]]></ClassName>
 									</ActiveObjectClass>
 									<GenericParameterSubstitute>
 										<GenericParameterSubstituteReference>
-											<PackageName><![CDATA[model_v5]]></PackageName>
+											<PackageName><![CDATA[model_visual]]></PackageName>
 											<ClassName><![CDATA[MqFan]]></ClassName>
 											<ItemName><![CDATA[1606944167897]]></ItemName>
 										</GenericParameterSubstituteReference>
@@ -1828,12 +1823,12 @@ for(int i=0; i < group.size(); i++){
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1606957957542</PresentationId>
 					<ActiveObjectClass>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[MqBench]]></ClassName>
 					</ActiveObjectClass>
 					<GenericParameterSubstitute>
 						<GenericParameterSubstituteReference>
-							<PackageName><![CDATA[model_v5]]></PackageName>
+							<PackageName><![CDATA[model_visual]]></PackageName>
 							<ClassName><![CDATA[MqBench]]></ClassName>
 							<ItemName><![CDATA[1606943482362]]></ItemName>
 						</GenericParameterSubstituteReference>
@@ -2163,12 +2158,12 @@ for(int i=0; i < group.size(); i++){
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<ActiveObjectClass>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[GoUpStairs]]></ClassName>
 					</ActiveObjectClass>
 					<GenericParameterSubstitute>
 						<GenericParameterSubstituteReference>
-							<PackageName><![CDATA[model_v5]]></PackageName>
+							<PackageName><![CDATA[model_visual]]></PackageName>
 							<ClassName><![CDATA[GoUpStairs]]></ClassName>
 							<ItemName><![CDATA[1607033679807]]></ItemName>
 						</GenericParameterSubstituteReference>
@@ -2304,12 +2299,12 @@ for(int i=0; i < group.size(); i++){
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<ActiveObjectClass>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[GoDownStairs]]></ClassName>
 					</ActiveObjectClass>
 					<GenericParameterSubstitute>
 						<GenericParameterSubstituteReference>
-							<PackageName><![CDATA[model_v5]]></PackageName>
+							<PackageName><![CDATA[model_visual]]></PackageName>
 							<ClassName><![CDATA[GoDownStairs]]></ClassName>
 							<ItemName><![CDATA[1607033701453]]></ItemName>
 						</GenericParameterSubstituteReference>
@@ -2446,12 +2441,12 @@ for(int i=0; i < group.size(); i++){
 					<ShowLabel>true</ShowLabel>
 					<PresentationId>1607057062876</PresentationId>
 					<ActiveObjectClass>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[MqFan]]></ClassName>
 					</ActiveObjectClass>
 					<GenericParameterSubstitute>
 						<GenericParameterSubstituteReference>
-							<PackageName><![CDATA[model_v5]]></PackageName>
+							<PackageName><![CDATA[model_visual]]></PackageName>
 							<ClassName><![CDATA[MqFan]]></ClassName>
 							<ItemName><![CDATA[1606944167897]]></ItemName>
 						</GenericParameterSubstituteReference>
@@ -3548,7 +3543,7 @@ for(int i=0; i<ped.theGroup.size(); i++){
 					<Rotation>0.0</Rotation>
 					<ImageFiles>
 						<ImageResourceReference>
-							<PackageName><![CDATA[model_v5]]></PackageName>
+							<PackageName><![CDATA[model_visual]]></PackageName>
 							<ClassName><![CDATA[SizeMatched_ground0.jpg]]></ClassName>
 						</ImageResourceReference>
 					</ImageFiles>
@@ -3985,7 +3980,7 @@ for(int i=0; i<ped.theGroup.size(); i++){
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<Z>0</Z>
-					<LevelVisibility>DIM_NON_CURRENT</LevelVisibility>
+					<LevelVisibility>HIDE_NON_CURRENT</LevelVisibility>
 
 			<Presentation>
 				<RectangleArea>
@@ -9613,7 +9608,7 @@ if(sqDistLeft < sqDistRight){
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<ActiveObjectClass>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 					</ActiveObjectClass>
 				</ContainerLink>
@@ -9645,7 +9640,7 @@ if(sqDistLeft < sqDistRight){
 					<X>10</X><Y>46</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ResourceReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[3d/bench.dae]]></ClassName>
 					</ResourceReference>
 					<ColorTable>
@@ -9674,7 +9669,7 @@ if(sqDistLeft < sqDistRight){
 					<X>10</X><Y>140</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ResourceReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[3d/bench.dae]]></ClassName>
 					</ResourceReference>
 					<ColorTable>
@@ -9703,7 +9698,7 @@ if(sqDistLeft < sqDistRight){
 					<X>10</X><Y>234</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ResourceReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[3d/bench.dae]]></ClassName>
 					</ResourceReference>
 					<ColorTable>
@@ -9732,7 +9727,7 @@ if(sqDistLeft < sqDistRight){
 					<X>10</X><Y>328</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ResourceReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[3d/bench.dae]]></ClassName>
 					</ResourceReference>
 					<ColorTable>
@@ -9761,7 +9756,7 @@ if(sqDistLeft < sqDistRight){
 					<X>10</X><Y>422</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ResourceReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[3d/bench.dae]]></ClassName>
 					</ResourceReference>
 					<ColorTable>
@@ -9790,7 +9785,7 @@ if(sqDistLeft < sqDistRight){
 					<X>10</X><Y>492</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ResourceReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[3d/bench.dae]]></ClassName>
 					</ResourceReference>
 					<ColorTable>
@@ -10740,7 +10735,7 @@ person_sitting.setVisible(sittingPosture);]]></Body>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<ActiveObjectClass>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 					</ActiveObjectClass>
 				</ContainerLink>
@@ -10772,7 +10767,7 @@ person_sitting.setVisible(sittingPosture);]]></Body>
 					<X>0</X><Y>0</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ResourceReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[3d/person.dae]]></ClassName>
 					</ResourceReference>
 					<ColorTable>
@@ -10821,7 +10816,7 @@ person_sitting.setVisible(sittingPosture);]]></Body>
 					<X>0</X><Y>0</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ResourceReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[3d/person_sitting.dae]]></ClassName>
 					</ResourceReference>
 					<ColorTable>
@@ -11465,7 +11460,7 @@ T ped - the pedestrian.]]></Description>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[GoUpStairs]]></ClassName>
 						<ItemName><![CDATA[goLvl_1_to_2_left]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -11475,7 +11470,7 @@ T ped - the pedestrian.]]></Description>
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[GoUpStairs]]></ClassName>
 						<ItemName><![CDATA[select_1_to_2_left_or_right]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -11498,7 +11493,7 @@ T ped - the pedestrian.]]></Description>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[GoUpStairs]]></ClassName>
 						<ItemName><![CDATA[select_1_to_2_left_or_right]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -11508,7 +11503,7 @@ T ped - the pedestrian.]]></Description>
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[GoUpStairs]]></ClassName>
 						<ItemName><![CDATA[goLvl_g_to_1]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -11531,7 +11526,7 @@ T ped - the pedestrian.]]></Description>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[GoUpStairs]]></ClassName>
 						<ItemName><![CDATA[goLvl_1_to_2_right]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -11541,7 +11536,7 @@ T ped - the pedestrian.]]></Description>
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[GoUpStairs]]></ClassName>
 						<ItemName><![CDATA[select_1_to_2_left_or_right]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -11564,7 +11559,7 @@ T ped - the pedestrian.]]></Description>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[GoUpStairs]]></ClassName>
 						<ItemName><![CDATA[goLvl_2_to_s]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -11574,7 +11569,7 @@ T ped - the pedestrian.]]></Description>
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[GoUpStairs]]></ClassName>
 						<ItemName><![CDATA[goLvl_1_to_2_left]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -11597,7 +11592,7 @@ T ped - the pedestrian.]]></Description>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[GoUpStairs]]></ClassName>
 						<ItemName><![CDATA[goLvl_1_to_2_right]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -11607,7 +11602,7 @@ T ped - the pedestrian.]]></Description>
 						<ItemName><![CDATA[out]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[GoUpStairs]]></ClassName>
 						<ItemName><![CDATA[goLvl_2_to_s]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -11630,7 +11625,7 @@ T ped - the pedestrian.]]></Description>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[GoUpStairs]]></ClassName>
 						<ItemName><![CDATA[goLvl_2_to_s]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -11656,7 +11651,7 @@ T ped - the pedestrian.]]></Description>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[GoUpStairs]]></ClassName>
 						<ItemName><![CDATA[goLvl_g_to_1]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -11706,7 +11701,7 @@ T ped - the pedestrian.]]></Description>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<ActiveObjectClass>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 					</ActiveObjectClass>
 				</ContainerLink>
@@ -12271,7 +12266,7 @@ T ped - the pedestrian.]]></Description>
 					<Rotation>0.0</Rotation>
 					<ImageFiles>
 						<ImageResourceReference>
-							<PackageName><![CDATA[model_v5]]></PackageName>
+							<PackageName><![CDATA[model_visual]]></PackageName>
 							<ClassName><![CDATA[upstairs.PNG]]></ClassName>
 						</ImageResourceReference>
 					</ImageFiles>
@@ -12816,7 +12811,7 @@ T ped - the pedestrian.]]></Description>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[GoDownStairs]]></ClassName>
 						<ItemName><![CDATA[select_2_to_1_left_or_right]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -12826,7 +12821,7 @@ T ped - the pedestrian.]]></Description>
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[GoDownStairs]]></ClassName>
 						<ItemName><![CDATA[goLvl_s_to_2]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -12849,7 +12844,7 @@ T ped - the pedestrian.]]></Description>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[GoDownStairs]]></ClassName>
 						<ItemName><![CDATA[goLvl_2_to_1_left]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -12859,7 +12854,7 @@ T ped - the pedestrian.]]></Description>
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[GoDownStairs]]></ClassName>
 						<ItemName><![CDATA[select_2_to_1_left_or_right]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -12882,7 +12877,7 @@ T ped - the pedestrian.]]></Description>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[GoDownStairs]]></ClassName>
 						<ItemName><![CDATA[goLvl_1_to_g]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -12892,7 +12887,7 @@ T ped - the pedestrian.]]></Description>
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[GoDownStairs]]></ClassName>
 						<ItemName><![CDATA[goLvl_2_to_1_left]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -12915,7 +12910,7 @@ T ped - the pedestrian.]]></Description>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[GoDownStairs]]></ClassName>
 						<ItemName><![CDATA[select_2_to_1_left_or_right]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -12925,7 +12920,7 @@ T ped - the pedestrian.]]></Description>
 						<ItemName><![CDATA[out2]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[GoDownStairs]]></ClassName>
 						<ItemName><![CDATA[goLvl_2_to_1_right]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -12948,7 +12943,7 @@ T ped - the pedestrian.]]></Description>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[GoDownStairs]]></ClassName>
 						<ItemName><![CDATA[goLvl_2_to_1_right]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -12958,7 +12953,7 @@ T ped - the pedestrian.]]></Description>
 						<ItemName><![CDATA[out]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[GoDownStairs]]></ClassName>
 						<ItemName><![CDATA[goLvl_1_to_g]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -12981,7 +12976,7 @@ T ped - the pedestrian.]]></Description>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[GoDownStairs]]></ClassName>
 						<ItemName><![CDATA[goLvl_1_to_g]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -13007,7 +13002,7 @@ T ped - the pedestrian.]]></Description>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[GoDownStairs]]></ClassName>
 						<ItemName><![CDATA[goLvl_s_to_2]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -13057,7 +13052,7 @@ T ped - the pedestrian.]]></Description>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<ActiveObjectClass>
-						<PackageName><![CDATA[model_v5]]></PackageName>
+						<PackageName><![CDATA[model_visual]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 					</ActiveObjectClass>
 				</ContainerLink>
@@ -13622,7 +13617,7 @@ T ped - the pedestrian.]]></Description>
 					<Rotation>0.0</Rotation>
 					<ImageFiles>
 						<ImageResourceReference>
-							<PackageName><![CDATA[model_v5]]></PackageName>
+							<PackageName><![CDATA[model_visual]]></PackageName>
 							<ClassName><![CDATA[downstairs.PNG]]></ClassName>
 						</ImageResourceReference>
 					</ImageFiles>
