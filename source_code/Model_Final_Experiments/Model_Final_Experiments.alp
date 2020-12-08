@@ -14056,9 +14056,6 @@ MqOutputClass.writeDoubleColsToFile(
 			<RangeVariationParamValue>	
 				<Id>1607257831994</Id>
 				<Type>FIXED</Type>
-				<Expression Class="CodeValue">
-					<Code><![CDATA[2]]></Code>
-				</Expression>
 				<From Class="CodeValue">
 					<Code><![CDATA[1]]></Code>
 				</From>
