@@ -1,0 +1,37 @@
+Parameters (Independent Variables)
+-----------------------------------
+NumOfGroups : Number of groups of people. (values = {50, 100, 150, 200, 250, 300})
+GapNumSeats : Number of seats left off for social distancing. (values = {0, 4})
+MinGroupSize : Minimum number of people that are in a group. (values = {1})
+MaxGroupSize : Maximum number of people that is allowed for a group. (values = {4, 5, 6, 7, 8})
+NumInfected : Number of Infected people in the population. (values = {10}) We made sure that each infected person is in a different group.
+ContactDistance : Distance considered for counting as a contact/exposure (values = {33}) . 30 pixels was modeled as 1 yard. Therefore, 33 pixels is approximately 1 meter.
+
+Response Variables (Dependent Variables)
+------------------------------------------
+numOfPeople : Total number of people in the population.
+numSusceptiblePeople : Number of susceptible people in the population at the final state of the simulation.
+
+numExposedPeople_Sitting : Number of people who got exposed to an infected person while they were sitting (due to sitting near an infected person)
+numExposedPeople_Walking : Number of people who got exposed to an infected person while they were walking
+
+numPeopleExposedByOthers_Sitting : Number of people who got exposed to an infected person from a different group than his own group while sitting
+numPeopleExposedByOthers_Walking : Number of people who got exposed to an infected person from a different group than his own group while walking
+
+numPeopleContactedByOthers_Sitting : Number of people who got contacted with at least one person from a different group than his own group while sitting
+numPeopleContactedByOthers_Walking : Number of people who got contacted with at least one person from a different group than his own group while walking
+
+mean_inf_contacts_sitting : Mean of number of seconds a person spends spends near an infected person while sitting
+mean_inf_contacts_walking : Mean of number of seconds a person spends spends near an infected person while walking
+
+mean_all_contacts_sitting : Mean of number of seconds a person spends near another person while sitting
+mean_all_contacts_walking : Mean of number of seconds a person spends near another person while walking
+
+mean_other_inf_contacts_sitting : Mean of number of seconds a person spends near an infected person from a different group while sitting
+mean_other_inf_contacts_walking : Mean of number of seconds a person spends near an infected person from a different group while walking
+
+mean_other_contacts_sitting : Mean of number of seconds a person spends near a person from a different group while sitting
+mean_other_contacts_walking : Mean of number of seconds a person spends near a person from a different group while sitting
+
+ArrivalTimeEnd : Time (in Minutes) spent for all the people to enter the stadium an sit down.
+
