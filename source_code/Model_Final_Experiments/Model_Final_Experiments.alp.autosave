@@ -14029,7 +14029,10 @@ MqOutputClass.writeDoubleColsToFile(
 			</FreeformParamValue>
 			<RangeVariationParamValue>	
 				<Id>1607071114415</Id>
-				<Type>RANGE</Type>
+				<Type>FIXED</Type>
+				<Expression Class="CodeValue">
+					<Code><![CDATA[5]]></Code>
+				</Expression>
 				<From Class="CodeValue">
 					<Code><![CDATA[4]]></Code>
 				</From>
@@ -14072,9 +14075,6 @@ MqOutputClass.writeDoubleColsToFile(
 			<RangeVariationParamValue>	
 				<Id>1607259709682</Id>
 				<Type>FIXED</Type>
-				<Expression Class="CodeValue">
-					<Code><![CDATA[50]]></Code>
-				</Expression>
 				<From Class="CodeValue">
 					<Code><![CDATA[100]]></Code>
 				</From>
