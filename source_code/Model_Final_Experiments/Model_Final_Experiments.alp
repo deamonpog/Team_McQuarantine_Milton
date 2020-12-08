@@ -101,7 +101,8 @@ while(itr.hasNext()){
 		}
 	}
 }
-applyNetwork();]]></AfterStepCode>
+applyNetwork();
+collectFanStateData();]]></AfterStepCode>
 					<SpaceType>CONTINUOUS</SpaceType>
 					<WidthCode><![CDATA[2500]]></WidthCode>
 					<HeightCode><![CDATA[3600]]></HeightCode>
@@ -149,6 +150,102 @@ applyNetwork();]]></AfterStepCode>
 			</ScaleRuler>
 			<CurrentLevel>1606946355009</CurrentLevel>
 			<ConnectionsId>1606943455759</ConnectionsId>
+			<Outputs>
+				<Output>
+					<Id>1607411724373</Id>
+					<Name><![CDATA[numExposedPeople]]></Name>
+					<X>-1200</X><Y>300</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Type><![CDATA[int]]></Type>
+					<UnitType><![CDATA[NONE]]></UnitType>
+					<Value Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</Value>
+					<ComputationMoment>MANUALLY</ComputationMoment>
+					<ComputationTimeCode Class="CodeUnitValue">
+						<Code><![CDATA[]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</ComputationTimeCode>
+					<ComputationDate>1607414400000</ComputationDate>
+				</Output>
+				<Output>
+					<Id>1607411935270</Id>
+					<Name><![CDATA[numSusceptiblePeople]]></Name>
+					<X>-1200</X><Y>250</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Type><![CDATA[int]]></Type>
+					<UnitType><![CDATA[NONE]]></UnitType>
+					<ComputationMoment>MANUALLY</ComputationMoment>
+					<ComputationTimeCode Class="CodeUnitValue">
+						<Code><![CDATA[]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</ComputationTimeCode>
+					<ComputationDate>1607414400000</ComputationDate>
+				</Output>
+				<Output>
+					<Id>1607412025185</Id>
+					<Name><![CDATA[numPeopleExposedByOthers]]></Name>
+					<X>-1200</X><Y>350</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Type><![CDATA[int]]></Type>
+					<UnitType><![CDATA[NONE]]></UnitType>
+					<Value Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</Value>
+					<ComputationMoment>MANUALLY</ComputationMoment>
+					<ComputationTimeCode Class="CodeUnitValue">
+						<Code><![CDATA[]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</ComputationTimeCode>
+					<ComputationDate>1607414400000</ComputationDate>
+				</Output>
+				<Output>
+					<Id>1607412345994</Id>
+					<Name><![CDATA[numPeopleContactedByOthers]]></Name>
+					<X>-1200</X><Y>400</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Type><![CDATA[int]]></Type>
+					<UnitType><![CDATA[NONE]]></UnitType>
+					<ComputationMoment>MANUALLY</ComputationMoment>
+					<ComputationTimeCode Class="CodeUnitValue">
+						<Code><![CDATA[]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</ComputationTimeCode>
+					<ComputationDate>1607414400000</ComputationDate>
+				</Output>
+				<Output>
+					<Id>1607412410398</Id>
+					<Name><![CDATA[numOfPeople]]></Name>
+					<X>-1200</X><Y>200</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Type><![CDATA[int]]></Type>
+					<UnitType><![CDATA[NONE]]></UnitType>
+					<Value Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</Value>
+					<ComputationMoment>MANUALLY</ComputationMoment>
+					<ComputationTimeCode Class="CodeUnitValue">
+						<Code><![CDATA[2]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</ComputationTimeCode>
+					<ComputationDate>1607414400000</ComputationDate>
+				</Output>
+			</Outputs>
 			<Variables>
 				<Variable Class="PlainVariable">
 					<Id>1607156381925</Id>
@@ -183,7 +280,7 @@ applyNetwork();]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1607398221501</Id>
 					<Name><![CDATA[currentNumGroups]]></Name>
-					<X>-950</X><Y>-820</Y>
+					<X>-1230</X><Y>120</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -198,7 +295,7 @@ applyNetwork();]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1607400626295</Id>
 					<Name><![CDATA[infectedInPop]]></Name>
-					<X>-1060</X><Y>-820</Y>
+					<X>-1380</X><Y>120</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -207,6 +304,66 @@ applyNetwork();]]></AfterStepCode>
 						<Type><![CDATA[int]]></Type>        
 						<InitialValue Class="CodeValue">
 							<Code><![CDATA[0]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1607411081476</Id>
+					<Name><![CDATA[SystemState]]></Name>
+					<X>-1450</X><Y>50</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[int]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[SYSTEM_ARRIVING]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1607411212838</Id>
+					<Name><![CDATA[numSittingFans]]></Name>
+					<X>-1060</X><Y>120</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[int]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1607411317062</Id>
+					<Name><![CDATA[SYSTEM_ARRIVING]]></Name>
+					<X>-1490</X><Y>20</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="true" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[static int]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1607411347841</Id>
+					<Name><![CDATA[SYSTEM_SITTING]]></Name>
+					<X>-1340</X><Y>20</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="true" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[static int]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[1]]></Code>
 						</InitialValue>
 					</Properties>
 				</Variable>
@@ -1124,8 +1281,8 @@ watchMatch.freeAllWaitingPeds();]]></Action>
 					<ReturnModificator>VOID</ReturnModificator>
 					<ReturnType><![CDATA[double]]></ReturnType>
 					<Id>1607408837878</Id>
-					<Name><![CDATA[collectData]]></Name>
-					<X>-720</X><Y>-840</Y>
+					<Name><![CDATA[collectFanStateData]]></Name>
+					<X>-1150</X><Y>50</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1135,6 +1292,13 @@ st_all_contacts.reset();
 mqFan.forEach((MqFan mqfan) -> {
 		st_inf_contacts.add(mqfan.numInfectiousContacts);
 		st_all_contacts.add(mqfan.numAllContacts);
+		st_other_inf_contacts.add(mqfan.numOtherGroupInfectiousContacts);
+		st_other_contacts.add(mqfan.numOtherGroupContacts);
+		numExposed = mqFan.findAll((MqFan mf) -> mf.infectionState == MqFan.STATE_EXPOSED).size();
+		numSusceptible = mqFan.findAll((MqFan mf) -> mf.infectionState == MqFan.STATE_SUSCEPTIBLE).size();
+		numContactsByOthers = mqFan.findAll((MqFan mf) -> mf.numOtherGroupContacts > 0).size();
+		numExposedByOthers = mqFan.findAll((MqFan mf) -> mf.numOtherGroupInfectiousContacts > 0).size();
+		numOfPeople = mqFan.size();
 	});]]></Body>
 				</Function>
 			</Functions>
@@ -1142,12 +1306,12 @@ mqFan.forEach((MqFan mqfan) -> {
     			<Statistics>
 					<Id>1607406319686</Id>
 					<Name><![CDATA[st_inf_contacts]]></Name>
-					<X>-720</X><Y>-800</Y>
+					<X>-1440</X><Y>200</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<AutoUpdate>true</AutoUpdate>
+					<AutoUpdate>false</AutoUpdate>
 					<OccurrenceAtTime>true</OccurrenceAtTime>
 					<OccurrenceDate>1607414400000</OccurrenceDate>
 					<OccurrenceTime Class="CodeUnitValue">
@@ -1163,12 +1327,54 @@ mqFan.forEach((MqFan mqfan) -> {
     			<Statistics>
 					<Id>1607407561158</Id>
 					<Name><![CDATA[st_all_contacts]]></Name>
-					<X>-720</X><Y>-750</Y>
+					<X>-1440</X><Y>250</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<AutoUpdate>true</AutoUpdate>
+					<AutoUpdate>false</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1607414400000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</RecurrenceCode>
+					<Discrete>true</Discrete>
+				</Statistics>
+    			<Statistics>
+					<Id>1607410085169</Id>
+					<Name><![CDATA[st_other_contacts]]></Name>
+					<X>-1440</X><Y>350</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<AutoUpdate>false</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1607414400000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</RecurrenceCode>
+					<Discrete>true</Discrete>
+				</Statistics>
+    			<Statistics>
+					<Id>1607410095737</Id>
+					<Name><![CDATA[st_other_inf_contacts]]></Name>
+					<X>-1440</X><Y>300</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<AutoUpdate>false</AutoUpdate>
 					<OccurrenceAtTime>true</OccurrenceAtTime>
 					<OccurrenceDate>1607414400000</OccurrenceDate>
 					<OccurrenceTime Class="CodeUnitValue">
@@ -1410,11 +1616,6 @@ mqFan.forEach((MqFan mqfan) -> {
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[ped.isRouting = true;
-
-ped.infectionState = ped.STATE_SUSCEPTIBLE;]]></Code>
-							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onBeginGrouping]]></Name>
@@ -1429,6 +1630,7 @@ if(currentNumGroups % infgap == 0){
 	int infectedIdx =(int)Math.floor(group.size() * Math.random());
 	MqFan infFan = (MqFan) group.get(infectedIdx);
 	infFan.infectionState = MqFan.STATE_INFECTED;
+	infFan.oval.setFillColor(red);
 	infectedInPop += 1;
 }
 currentNumGroups += 1;
@@ -1950,7 +2152,11 @@ for(int i=0; i < group.size(); i++){
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[ped.connections.disconnectFromAll();]]></Code>
+								<Code><![CDATA[ped.connections.disconnectFromAll();
+numSittingFans += 1;
+if(NumOfGroups == currentNumGroups && mqFan.size() == numSittingFans){
+	SystemState = SYSTEM_SITTING;
+}]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -2475,7 +2681,7 @@ for(int i=0; i < group.size(); i++){
 					<X>-880</X><Y>-510</Y>
 					<Label><X>-40</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>false</PresentationFlag>
+					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<ActiveObjectClass>
 						<PackageName><![CDATA[com.anylogic.libraries.pedestrian]]></PackageName>
@@ -8644,44 +8850,6 @@ for(int i=0; i<ped.theGroup.size(); i++){
 
 				</Level>
 			</Presentation>
-			<Areas>
-				<Area>
-					<Id>1606951223272</Id>
-					<Name><![CDATA[viewArea_code]]></Name>
-					<X>-1460</X><Y>-1070</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Title><![CDATA[]]></Title>
-					<Width>1220</Width>
-					<Height>930</Height>
-				</Area>
-				<Area>
-					<Id>1606951243354</Id>
-					<Name><![CDATA[viewArea_3d]]></Name>
-					<X>0</X><Y>-3560</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Title><![CDATA[]]></Title>
-					<Width>1920</Width>
-					<Height>1240</Height>
-				</Area>
-				<Area>
-					<Id>1606951271665</Id>
-					<Name><![CDATA[viewArea_2d]]></Name>
-					<X>0</X><Y>0</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Title><![CDATA[]]></Title>
-					<Width>2400</Width>
-					<Height>3520</Height>
-				</Area>
-			</Areas>
 
 		</ActiveObjectClass>
 		<!--   =========   Active Object Class   ========  -->
@@ -9583,9 +9751,17 @@ if(sqDistLeft < sqDistRight){
 		if(infectionState == STATE_SUSCEPTIBLE && mqfan.infectionState == STATE_INFECTED){
 			//infection_indicator.setFillColor(orange);
 			infectionState = STATE_EXPOSED;
+			oval.setFillColor(orange);
 		}
 		if(infectionState == STATE_EXPOSED && mqfan.infectionState == STATE_INFECTED){
 			numInfectiousContacts += 1;
+		}
+		
+		if(theGroup != mqfan.theGroup){
+			numOtherGroupContacts += 1;
+			if(infectionState == STATE_EXPOSED && mqfan.infectionState == STATE_INFECTED){
+				numOtherGroupInfectiousContacts += 1;
+			}
 		}
 	}
 }]]></AfterStepCode>
@@ -9765,7 +9941,7 @@ if(sqDistLeft < sqDistRight){
 				<Variable Class="PlainVariable">
 					<Id>1607300889375</Id>
 					<Name><![CDATA[infectionState]]></Name>
-					<X>350</X><Y>100</Y>
+					<X>350</X><Y>50</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9825,7 +10001,7 @@ if(sqDistLeft < sqDistRight){
 				<Variable Class="PlainVariable">
 					<Id>1607302753202</Id>
 					<Name><![CDATA[numInfectiousContacts]]></Name>
-					<X>350</X><Y>150</Y>
+					<X>350</X><Y>200</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9855,7 +10031,7 @@ if(sqDistLeft < sqDistRight){
 				<Variable Class="PlainVariable">
 					<Id>1607323309082</Id>
 					<Name><![CDATA[numAllContacts]]></Name>
-					<X>350</X><Y>200</Y>
+					<X>350</X><Y>250</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9865,6 +10041,33 @@ if(sqDistLeft < sqDistRight){
 						<InitialValue Class="CodeValue">
 							<Code><![CDATA[0]]></Code>
 						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1607409872358</Id>
+					<Name><![CDATA[numOtherGroupContacts]]></Name>
+					<X>350</X><Y>150</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[int]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1607410033559</Id>
+					<Name><![CDATA[numOtherGroupInfectiousContacts]]></Name>
+					<X>350</X><Y>100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
 					</Properties>
 				</Variable>
 			</Variables>
@@ -9916,10 +10119,34 @@ if(sqDistLeft < sqDistRight){
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
 					<Z>0</Z>
 					<LevelVisibility>DIM_NON_CURRENT</LevelVisibility>
 
+			<Presentation>
+				<Oval>
+					<Id>1607409692966</Id>
+					<Name><![CDATA[oval]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>0</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<RadiusX>10</RadiusX>
+					<RadiusY>40</RadiusY>
+					<Rotation>0.0</Rotation>
+					<FillColor>-16711936</FillColor>
+					<FillMaterial>null</FillMaterial>
+				</Oval>
+			</Presentation>
 
 				</Level>
 			</Presentation>
