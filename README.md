@@ -109,14 +109,20 @@ Second, during live game-day conditions to observe and confirm COVID mitigation 
 
 ### 4.5 Simulation Development
 The primary goal of the UCF Football Game Attendance was to accurately model the UCF football stadium student section. A scaled map of the 
-stadium was selected to provide the base of the model. ![UCF Football Stadium](Images/StadiumBaseMap.png) 
+stadium was selected to provide the base of the model. 
+
+![UCF Football Stadium](Images/StadiumBaseMap.png) 
 [image credit: [ucfknights.com](https://ucfknights.com/sports/2018/10/30/211778281.aspx) ]
 
 To create high spacial fidelity, the research team conducted a survey of the stadium. The survey was used to confirm the map scale and record measurements 
-to construct the stadium model. ![Stadium Survey](Images/stadiumsurvey.png)
+to construct the stadium model. 
+
+![Stadium Survey](Images/stadiumsurvey.png)
 
 To observe and model UCF football game COVID mitigation strategies, the survey team attended a home game under COVID mitigation policies. 
-The team observed the stadium at 25% capacity with mandatory seat spacing. ![COVID home game](Images/SocialDistancing.png)
+The team observed the stadium at 25% capacity with mandatory seat spacing. 
+
+![COVID home game](Images/SocialDistancing.png)
 [image credit: [www.clickorlando.com](https://www.clickorlando.com/news/local/2020/10/04/ucf-knights-play-tulsa-with-new-coronavirus-rules-for-fans/) ]
 
 Using AnyLogic software, the research team created a to-scale model of the UCF football stadium student section. ![Stadium Model](Images/stadiummodel.png)
@@ -137,6 +143,7 @@ models people entering the stadium and looking for their seat before sitting. Th
 as a group. 
 
 ![agent pic 1](Images/agnet1.png)
+
 ![agent pic 2](Images/agent2.png)
    
 
@@ -204,26 +211,25 @@ while sitting significantly extended contact time, however, with a lower number 
 ### 6.1 Recommendations
 Capacity can be increased without significant a transmission risk increase. Below are recommendations to to limit both the number and duration of contacts, and therefore, reduce transmission risk.
 
-#####1. Limit diversity of contacts.
+##### 1. Limit diversity of contacts.
 * Stadium Entrance "Boarding Groups" to limit the funnel effect of limited entry points at specified times
 * Uni-directional  movement to prevent additional contacts of bidirectional movement (see suggested map below)
     
 ![Unidirectonal](Images/unidirectional.png) 
 
 
-#####2. Limit spectating contact time (sitting)
+##### 2. Limit spectating contact time (sitting)
 * Limit group sizes to 6 or below. The findings show that group sizes 7 or above do correlate with higher contact rates.
 * Change seat spacing. Current UCF football game COVID mitigation only requires one vertical row space, however, this is still within the recommended 6 foot social distancing radius. 
 
-#####2. Limit Io and Ro
+##### 3. Limit Io and Ro
 During the observational research, it was noted that there were no entry temperature checks and mask wearing in the stand was not enforced. 
 Reducing both the initial infected value and the probability of Ro transmission will reduce overall exposure risk  
 
 ### 6.1 Future Research
 
 
-**Midterm PowerPoint**
- [![PPT images](Images/MidtermPPT.png)](Presentations)
+
 
 
 ## References (unformated right now)
