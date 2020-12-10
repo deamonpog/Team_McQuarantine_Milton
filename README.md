@@ -229,9 +229,15 @@ Reducing both the initial infected value and the probability of Ro transmission 
 ### 6.1 Future Research
 
 COVID Aerosol Modeling
-  -This presentation lightly touched on Aerosol research and its contributions to the emission of respiratory particles. Deriving data from current literature and upcoming experiments related to aerosol research can be used for modeling in future projects. Our simulation highlights the effects of social distancing and other similar policies, but not the aerosol SARS-CoV-2 droplets that can remain in the air and potentially influence the infection/exposure rates, especially taking into account of individuals who do not wear face masks nor practice social distancing. 
+  -This presentation lightly touched on Aerosol research and its contributions to the emission of respiratory particles. Deriving data from current literature and upcoming experiments related to aerosol research can be used for modeling in future projects. Our simulation highlights the effects of social distancing and other similar policies, but not the aerosol SARS-CoV-2 droplets that can remain in the air and potentially influence the infection/exposure rates, especially taking into account of individuals who do not wear face masks nor practice social distancing.
 
+Seat Spacing Optimization
 
+Unidirectional Traffic Pattern Efficacy
+
+Bigger Scale (Whole Stadium, adding more behaviors)
+
+Implement Weather Conditions (rain vs. sunny weather, etc.)
 
 
 ## References
