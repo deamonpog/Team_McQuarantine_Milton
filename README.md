@@ -28,6 +28,7 @@ Furthermore, Chu et al. (2020) expressed that usage of face masks were protectiv
 
 Jarvis et al. (2020) published a paper centered around the estimation of 'R naught' (R0) in the United Kingdom (UK). R0 is the potential transmission of a disease; R0 < 1 - each existing infection causes less than one new infection; R0 = 1 - each existing infection causes one new infection; R0 > 1 - each existing infection causes more than one new infection and may cause an outbreak or epidemic. The universally accepted R0 for SARS-CoV-2 is still uncertain, but this study seeks to establish some metric to base viral-spread interventions, especially through physical distancing measures that may lead to substantial decreases in contact levels. This study asked a representative sample of UK adults (1356 UK participants) about their contact patterns on the day prior and recorded 3849 contacts. The estimation of R0 prior to lockdown (in the UK) was 2.6, and the authors found that, under current social distancing measures, the current R0 estimation was lowered to 0.62 based on all types of contact.
 
+
 ## 4. Research Method
 ### Overview
 The methodology seeks to establish the baseline COVID transmission risk with current attendee mitigation strategies (25% capacity, zone segregation). Followed by testing to identify at what attendance threshold and combination of mitigation strategies allow for increased home game attendance without increasing COVID transmission risk.
@@ -41,56 +42,185 @@ The dependent variables for our experiment are the number of agent contacts and 
 ![results table](Images/resultstable.png)
 
 The experiment process follows the table above. Data will be collected using anylogic analytics and include agent contact statistics and infection statistics based on research-informed
-Ro values and the initial value of the SIR infection. In addition to the statistical analysis, we will complete each simulation trial with a heatmap that identifies high agent contact areas.
-Depending on experimental findings and capabilities, we may add a final phase to the experiment that finds the optimal attendance capacity and group size limitations that maximizes COVID attendance
-with no increase in infection rates.
+Ro values and the initial value of the SIR infection.
+The final phase to the experiment that finds the optimal attendance capacity and group size limitations that maximizes COVID attendance
+with minimal increase in infection rates.
 
 ### 4.1 Reseach Questions
 
-Are current COVID football attendance limitation and social distancing strategies appropriate for maximizing attendance and minimizing transmission risk, while controlling for the masked COVID transmission rate?
+Are current football attendance limitation and social distancing strategies appropriate for maximizing attendance and minimizing transmission risk, while controlling for the masked COVID transmission rate?
 
 ### 4.2 Hypothesis
 
-**Hypothesis 1:**
-The number of expected infections proportional to the squared value of the attendance.
 
-**Hypothesis 2:**
+**Hypothesis 1:**
 The group size does affect the number of infections (or number of contacts).
 
-**Hypothesis 3:**
+**Hypothesis 2:**
 The number of expected infections is proportional to the group size.
 
-**Hypothesis 4:**
+**Hypothesis 3:**
 The number of infections is not proportional to attendance capacity
 
 ### 4.3 Variables
 
 **Independent:**
-Stadium capacity and social distancing (group size), group strategy
+* Attendance Capacity: Total number of agents in the population. (values = {132:1342})
+
+* Number of groups: Number of groups of agents. (values = {50, 100, 150, 200, 250, 300})
+* Seat Gaps: Number of seats left off for social distancing. (values = {0, 4})
+* Minimum Group Size: Minimum number of agents that are in a group. (values = {1})
+* Maximum Group Size: Maximum number of agents that is allowed for a group. (values = {4, 5, 6, 7, 8})
+* Location and Group of Infected Agent: The number of infected agents is a control for this experiment; however, the group in which they are included and starting location is an independent variable. 
+* Transmission Range: Distance considered for counting as a contact/exposure (values = {33}) . 30 pixels was modeled as 1 yard. Therefore, 33 pixels is approximately 1 meter.
 
 **Dependent:**
-transmission rate, number of contacts
+
+* Susceptible Agents: Number of susceptible people in the population at the final state of the simulation.
+
+* Number of Exposed Sitting: Number of agents who got exposed to an infected person while they were sitting (due to sitting near an infected person)
+* Number of Exposed Walking: Number of people who got exposed to an infected person while they were walking.
+* Extra-group Exposure Sitting: Number of agents who got exposed to an infected agent from a different group than their own group while sitting.
+* Extra-group Exposure Walking: Number of agents who got exposed to an infected agent from a different group than their own group while walking.
+* Number of Contacts Sitting: Number of agents who got contacted with at least one agent from a different group than their own group while sitting.
+* Number of Contacts Walking: Number of agents who got contacted with at least one agent from a different group than their own group while walking.
+* Mean Exposed Time Sitting: Mean of number of seconds an agent is in contact range of an infected agent while sitting.
+* Mean Exposed Time Walking: Mean of number of seconds an agent is in contact range of an infected agent while walking.
+
+* Mean Contact Time Sitting : Mean of number of seconds an agent spends in contact range of another agent while sitting.
+* Mean Contact Time Walking: Mean of number of seconds an agent spends in contact range of another agent while walking.
+* Seat Search: Time (in minutes) spent for all agents to enter the stadium an sit down.
 
 **Control:**
-Masked interpersonal transmission rate
+ 
+* Simulation time: The simulation runs in real time for one hour.
+
+* Io: Number of initially infected agents. (values = {10}).
+* Ro: Likelihood of a susceptible agent contracting COVID from an infected agent.    
 
 ### 4.4 Materials / Apparatus
 
-* Anylogic agent model
-* Anylogic SIR model
+* Anylogic: [Anylogic](https://www.anylogic.com/) is a multi-method modeling and simulation tool that supports agent based, discrete, continuous and dynamic event modeling.
+it offers visual logic, 3D representation, and data analysis. AnyLogic is used to create our agent based simulation logic, data collection, and 3D visualization.   
 
-### 4.5 Participants
+* RStudio: [RStudio](https://rstudio.com/) is an open source R IDE for statistical data analysis and visualization. RStudio is used to analyze the AnyLogic response variable output.   
+* Real world observation: The stadium was observed in two conditions. First, while empty to acquire precise measurements for accurate spacial modeling. 
+Second, during live game-day conditions to observe and confirm COVID mitigation strategies for behavioral modeling.
 
-* 1,600 agent spectators
+### 4.5 Simulation Development
+The primary goal of the UCF Football Game Attendance was to accurately model the UCF football stadium student section. A scaled map of the 
+stadium was selected to provide the base of the model. ![UCF Football Stadium](Images/StadiumBaseMap.png) 
+[image credit: [ucfknights.com](https://ucfknights.com/sports/2018/10/30/211778281.aspx) ]
+
+To create high spacial fidelity, the research team conducted a survey of the stadium. The survey was used to confirm the map scale and record measurements 
+to construct the stadium model. ![Stadium Survey](Images/stadiumsurvey.png)
+
+To observe and model UCF football game COVID mitigation strategies, the survey team attended a home game under COVID mitigation policies. 
+The team observed the stadium at 25% capacity with mandatory seat spacing. ![COVID home game](Images/SocialDistancing.png)
+[image credit: [www.clickorlando.com](https://www.clickorlando.com/news/local/2020/10/04/ucf-knights-play-tulsa-with-new-coronavirus-rules-for-fans/) ]
+
+Using AnyLogic software, the research team created a to-scale model of the UCF football stadium student section. ![Stadium Model](Images/stadiummodel.png)
+ 
+### 4.6 Participants
+
+* 1,342 agent spectators
   * 6' contact zone
   * Grouping behaviors
-  * Food/Bathroom behaviors
+  * Seat finding behaviors
+  * SIR state markers
 
-## 5. Model Demo
+The AnyLogic agent population ranges from 132 to 1342 depending on parameter configuration. Each agent has a six foot contact
+radius that tracks when agents pass inside of the radius. Agents that are infected are marked with a red disc above their heads. Exposed
+agents are marked with an orange disc above their head. Additionally, the orange exposed disc increases its y value length based on the time
+an agent is in contact with an infected agent. Finally, the agents display both seat searching and grouping behaviors. The seat searching behavior
+models people entering the stadium and looking for their seat before sitting. The grouping behavior models people arriving and watching the game 
+as a group. 
+
+![agent pic 1](Images/agnet1.png)
+![agent pic 2](Images/agent2.png)
+   
+
+### 4.7 Simulation Experiment
+The simulation experiment consisted of 60 parameter configuration experiments. Below is a table of each experiment.
+
+![parameter configuration table](Images/paramTable.png)
 
 
+## 5. Findings
+Findings were analyzed using RStudio. This section will address each hypothesis with data visualization and analysis.
 
-## PPT
+### 5.1 Hypothesis 1
+##### The group size does affect the number of infections (or number of contacts).
+The data shows that group size does affect the number of agent exposures to infected agents across attendance
+capacities.
+
+![Rplot](Images/Rplot.png) 
+
+The plot above shows the positive collation in group size and total exposure count across stadium capacities. Of note, the middle group sizes 
+in the 50%-75% did not increase incrementally.
+
+![Rplot6](Images/Rplot06.png) 
+
+The contact time by group size plot above affirms the hypothesis as well. Smaller group sizes see lower ammounts
+of total contact time between agents. Alternatively, the larger group sizes see an increased contact time. 
+
+### 5.2 Hypothesis 2
+##### The number of expected infections (contacts) is proportional to the group size.
+The data shows that the risk of infection is not directly proportional to group size across attendance capacities and agent states (walking or seated)
+
+![Rplot6](Images/Rplot04.png) 
+
+The plot above shows that group size contacts stay relatively the same for group sizes 4, 5, and 6 when attendance capacity is 
+is in the 50%-75% quartile or below. Group sizes 7 and 8 show an increase in contacts at capacities above 25%.
+
+### 5.3 Hypothesis 3
+##### The number of infections is not proportional to attendance capacity.
+The data shows that attendance capacity and infection exposures are positively correlated
+
+![Rplot6](Images/Rplot01.png) 
+
+The plot above shows that total exposures are positively correlated to attendance capacity across group sizes and mandatory seat spacing. 
+
+![Rplot6](Images/Rplot07.png) 
+
+Additionally, the agent contact time by attendance capacity density plot above shows that agent contact time
+is shorter at low capacity, and well distributed at the higher capacities.  
+
+### 5.4 Additional Data of Interest
+The two plots below show that agents experience a higher number of contacts while walking. However contact time
+while seated was significantly higher than walking.
+
+![Rplot6](Images/Rplot02.png) 
+
+![Rplot6](Images/Rplot05.png) 
+
+### 5.5 Putting it Together
+Overall higher attendance capacity positively correlated with elevated exposures. However, agents contacts, or risk of transmission remained flat
+from 25%-75% at group sizes 6 or below. Additionally, contact time between group sizes 4 through 6 remained
+similar before a significant increase in group sizes 7 or above. Walking saw a greater number and diversity of short duration contacts,
+while sitting significantly extended contact time, however, with a lower number and diversity of contacts.
+
+## 6. Recommendations and Future Research
+### 6.1 Recommendations
+Capacity can be increased without significant a transmission risk increase. Below are recommendations to to limit both the number and duration of contacts, and therefore, reduce transmission risk.
+
+#####1. Limit diversity of contacts.
+* Stadium Entrance "Boarding Groups" to limit the funnel effect of limited entry points at specified times
+* Uni-directional  movement to prevent additional contacts of bidirectional movement (see suggested map below)
+    
+![Unidirectonal](Images/unidirectional.png) 
+
+
+#####2. Limit spectating contact time (sitting)
+* Limit group sizes to 6 or below. The findings show that group sizes 7 or above do correlate with higher contact rates.
+* Change seat spacing. Current UCF football game COVID mitigation only requires one vertical row space, however, this is still within the recommended 6 foot social distancing radius. 
+
+#####2. Limit Io and Ro
+During the observational research, it was noted that there were no entry temperature checks and mask wearing in the stand was not enforced. 
+Reducing both the initial infected value and the probability of Ro transmission will reduce overall exposure risk  
+
+### 6.1 Future Research
+
 
 **Midterm PowerPoint**
  [![PPT images](Images/MidtermPPT.png)](Presentations)
