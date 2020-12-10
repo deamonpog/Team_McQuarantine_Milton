@@ -71,7 +71,7 @@ The number of infections is not proportional to attendance capacity
 * Seat Gaps: Number of seats left off for social distancing. (values = {0, 4})
 * Minimum Group Size: Minimum number of agents that are in a group. (values = {1})
 * Maximum Group Size: Maximum number of agents that is allowed for a group. (values = {4, 5, 6, 7, 8})
-* Location and Group of Infected Agent: The number of infected agents is a control for this experiment; however, the group in which they are included and starting location is an independent variable. 
+* Location and Group of Infected Agent: The number of infected agents is a control for this experiment; however, the group in which they are included and starting location is an independent variable.
 * Transmission Range: Distance considered for counting as a contact/exposure (values = {33}) . 30 pixels was modeled as 1 yard. Therefore, 33 pixels is approximately 1 meter.
 
 **Dependent:**
@@ -92,7 +92,7 @@ The number of infections is not proportional to attendance capacity
 * Seat Search: Time (in minutes) spent for all agents to enter the stadium an sit down.
 
 **Control:**
- 
+
 * Simulation time: The simulation runs in real time for one hour.
 
 * Io: Number of initially infected agents. (values = {10}).
@@ -104,29 +104,29 @@ The number of infections is not proportional to attendance capacity
 it offers visual logic, 3D representation, and data analysis. AnyLogic is used to create our agent based simulation logic, data collection, and 3D visualization.   
 
 * RStudio: [RStudio](https://rstudio.com/) is an open source R IDE for statistical data analysis and visualization. RStudio is used to analyze the AnyLogic response variable output.   
-* Real world observation: The stadium was observed in two conditions. First, while empty to acquire precise measurements for accurate spacial modeling. 
+* Real world observation: The stadium was observed in two conditions. First, while empty to acquire precise measurements for accurate spacial modeling.
 Second, during live game-day conditions to observe and confirm COVID mitigation strategies for behavioral modeling.
 
 ### 4.5 Simulation Development
-The primary goal of the UCF Football Game Attendance was to accurately model the UCF football stadium student section. A scaled map of the 
-stadium was selected to provide the base of the model. 
+The primary goal of the UCF Football Game Attendance was to accurately model the UCF football stadium student section. A scaled map of the
+stadium was selected to provide the base of the model.
 
-![UCF Football Stadium](Images/StadiumBaseMap.png) 
+![UCF Football Stadium](Images/StadiumBaseMap.png)
 [image credit: [ucfknights.com](https://ucfknights.com/sports/2018/10/30/211778281.aspx) ]
 
-To create high spacial fidelity, the research team conducted a survey of the stadium. The survey was used to confirm the map scale and record measurements 
-to construct the stadium model. 
+To create high spacial fidelity, the research team conducted a survey of the stadium. The survey was used to confirm the map scale and record measurements
+to construct the stadium model.
 
 ![Stadium Survey](Images/stadiumsurvey.png)
 
-To observe and model UCF football game COVID mitigation strategies, the survey team attended a home game under COVID mitigation policies. 
-The team observed the stadium at 25% capacity with mandatory seat spacing. 
+To observe and model UCF football game COVID mitigation strategies, the survey team attended a home game under COVID mitigation policies.
+The team observed the stadium at 25% capacity with mandatory seat spacing.
 
 ![COVID home game](Images/SocialDistancing.png)
 [image credit: [www.clickorlando.com](https://www.clickorlando.com/news/local/2020/10/04/ucf-knights-play-tulsa-with-new-coronavirus-rules-for-fans/) ]
 
 Using AnyLogic software, the research team created a to-scale model of the UCF football stadium student section. ![Stadium Model](Images/stadiummodel.png)
- 
+
 ### 4.6 Participants
 
 * 1,342 agent spectators
@@ -139,13 +139,13 @@ The AnyLogic agent population ranges from 132 to 1342 depending on parameter con
 radius that tracks when agents pass inside of the radius. Agents that are infected are marked with a red disc above their heads. Exposed
 agents are marked with an orange disc above their head. Additionally, the orange exposed disc increases its y value length based on the time
 an agent is in contact with an infected agent. Finally, the agents display both seat searching and grouping behaviors. The seat searching behavior
-models people entering the stadium and looking for their seat before sitting. The grouping behavior models people arriving and watching the game 
-as a group. 
+models people entering the stadium and looking for their seat before sitting. The grouping behavior models people arriving and watching the game
+as a group.
 
 ![agent pic 1](Images/agnet1.png)
 
 ![agent pic 2](Images/agent2.png)
-   
+
 
 ### 4.7 Simulation Experiment
 The simulation experiment consisted of 60 parameter configuration experiments. Below is a table of each experiment.
@@ -161,34 +161,34 @@ Findings were analyzed using RStudio. This section will address each hypothesis 
 The data shows that group size does affect the number of agent exposures to infected agents across attendance
 capacities.
 
-![Rplot](Images/Rplot.png) 
+![Rplot](Images/Rplot.png)
 
-The plot above shows the positive collation in group size and total exposure count across stadium capacities. Of note, the middle group sizes 
+The plot above shows the positive collation in group size and total exposure count across stadium capacities. Of note, the middle group sizes
 in the 50%-75% did not increase incrementally.
 
-![Rplot6](Images/Rplot06.png) 
+![Rplot6](Images/Rplot06.png)
 
 The contact time by group size plot above affirms the hypothesis as well. Smaller group sizes see lower ammounts
-of total contact time between agents. Alternatively, the larger group sizes see an increased contact time. 
+of total contact time between agents. Alternatively, the larger group sizes see an increased contact time.
 
 ### 5.2 Hypothesis 2
 ##### The number of expected infections (contacts) is proportional to the group size.
 The data shows that the risk of infection is not directly proportional to group size across attendance capacities and agent states (walking or seated)
 
-![Rplot6](Images/Rplot04.png) 
+![Rplot6](Images/Rplot04.png)
 
-The plot above shows that group size contacts stay relatively the same for group sizes 4, 5, and 6 when attendance capacity is 
+The plot above shows that group size contacts stay relatively the same for group sizes 4, 5, and 6 when attendance capacity is
 is in the 50%-75% quartile or below. Group sizes 7 and 8 show an increase in contacts at capacities above 25%.
 
 ### 5.3 Hypothesis 3
 ##### The number of infections is not proportional to attendance capacity.
 The data shows that attendance capacity and infection exposures are positively correlated
 
-![Rplot6](Images/Rplot01.png) 
+![Rplot6](Images/Rplot01.png)
 
-The plot above shows that total exposures are positively correlated to attendance capacity across group sizes and mandatory seat spacing. 
+The plot above shows that total exposures are positively correlated to attendance capacity across group sizes and mandatory seat spacing.
 
-![Rplot6](Images/Rplot07.png) 
+![Rplot6](Images/Rplot07.png)
 
 Additionally, the agent contact time by attendance capacity density plot above shows that agent contact time
 is shorter at low capacity, and well distributed at the higher capacities.  
@@ -197,9 +197,9 @@ is shorter at low capacity, and well distributed at the higher capacities.
 The two plots below show that agents experience a higher number of contacts while walking. However contact time
 while seated was significantly higher than walking.
 
-![Rplot6](Images/Rplot02.png) 
+![Rplot6](Images/Rplot02.png)
 
-![Rplot6](Images/Rplot05.png) 
+![Rplot6](Images/Rplot05.png)
 
 ### 5.5 Putting it Together
 Overall higher attendance capacity positively correlated with elevated exposures. However, agents contacts, or risk of transmission remained flat
@@ -214,25 +214,27 @@ Capacity can be increased without significant a transmission risk increase. Belo
 ##### 1. Limit diversity of contacts.
 * Stadium Entrance "Boarding Groups" to limit the funnel effect of limited entry points at specified times
 * Uni-directional  movement to prevent additional contacts of bidirectional movement (see suggested map below)
-    
-![Unidirectonal](Images/unidirectional.png) 
+
+![Unidirectonal](Images/unidirectional.png)
 
 
 ##### 2. Limit spectating contact time (sitting)
 * Limit group sizes to 6 or below. The findings show that group sizes 7 or above do correlate with higher contact rates.
-* Change seat spacing. Current UCF football game COVID mitigation only requires one vertical row space, however, this is still within the recommended 6 foot social distancing radius. 
+* Change seat spacing. Current UCF football game COVID mitigation only requires one vertical row space, however, this is still within the recommended 6 foot social distancing radius.
 
 ##### 3. Limit Io and Ro
-During the observational research, it was noted that there were no entry temperature checks and mask wearing in the stand was not enforced. 
+During the observational research, it was noted that there were no entry temperature checks and mask wearing in the stand was not enforced.
 Reducing both the initial infected value and the probability of Ro transmission will reduce overall exposure risk  
 
 ### 6.1 Future Research
 
+COVID Aerosol Modeling
+  -This presentation lightly touched on Aerosol research and its contributions to the emission of respiratory particles. Deriving data from current literature and upcoming experiments related to aerosol research can be used for modeling in future projects. Our simulation highlights the effects of social distancing and other similar policies, but not the aerosol SARS-CoV-2 droplets that can remain in the air and potentially influence the infection/exposure rates, especially taking into account of individuals who do not wear face masks nor practice social distancing. 
 
 
 
 
-## References 
+## References
 
 - [Bouchnita, A., & Jebrane, A. (2020). A hybrid multi-scale model of COVID-19 transmission dynamics to assess the potential of non-pharmaceutical interventions. Chaos, Solitons & Fractals, 109941.](https://www.sciencedirect.com/science/article/pii/S0960077920303404?casa_token=It_NawpEwfUAAAAA:yOCsDOdT_8y1PFQ2cypB6o1IQRARaAfBFGCkl0OMqnq1_ibmzLBTY7tJ2FAwBaDBzdj1kIvNKA)
 
@@ -242,7 +244,7 @@ Reducing both the initial infected value and the probability of Ro transmission 
 
 - [Fang, Z., Huang, Z., Li, X., Zhang, J., Lv, W., Zhuang, L., ... & Huang, N. (2020). How many infections of COVID-19 there will be in the" Diamond Princess"-Predicted by a virus transmission model based on the simulation of crowd flow. arXiv preprint arXiv:2002.10616.](https://arxiv.org/ftp/arxiv/papers/2002/2002.10616.pdf)
 
-- [Jarvis, C. I., Van Zandvoort, K., Gimma, A., Prem, K., Klepac, P., Rubin, G. J., & Edmunds, W. J. (2020). Quantifying the impact of physical distance measures on the transmission of COVID-19 in the UK. BMC medicine, 18, 1-10.](https://link.springer.com/content/pdf/10.1186/s12916-020-01597-8.pdf) 
+- [Jarvis, C. I., Van Zandvoort, K., Gimma, A., Prem, K., Klepac, P., Rubin, G. J., & Edmunds, W. J. (2020). Quantifying the impact of physical distance measures on the transmission of COVID-19 in the UK. BMC medicine, 18, 1-10.](https://link.springer.com/content/pdf/10.1186/s12916-020-01597-8.pdf)
 
 - [Lee, J. M. (2020, November 10). What Fans Need to Know for UCF's 2020 Football Season: University of Central Florida News. Retrieved December 10, 2020](https://www.ucf.edu/news/what-fans-need-to-know-for-ucfs-2020-football-season/)
 
