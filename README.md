@@ -234,24 +234,24 @@ Reducing both the initial infected value and the probability of Ro transmission 
 
 ## References 
 
-- [Bouchnita, A., & Jebrane, A. (2020). A hybrid multi-scale model of COVID-19 transmission dynamics to assess the potential of non-pharmaceutical interventions. Chaos, Solitons & Fractals, 109941.] (https://www.sciencedirect.com/science/article/pii/S0960077920303404?casa_token=It_NawpEwfUAAAAA:yOCsDOdT_8y1PFQ2cypB6o1IQRARaAfBFGCkl0OMqnq1_ibmzLBTY7tJ2FAwBaDBzdj1kIvNKA)
+- [Bouchnita, A., & Jebrane, A. (2020). A hybrid multi-scale model of COVID-19 transmission dynamics to assess the potential of non-pharmaceutical interventions. Chaos, Solitons & Fractals, 109941.](https://www.sciencedirect.com/science/article/pii/S0960077920303404?casa_token=It_NawpEwfUAAAAA:yOCsDOdT_8y1PFQ2cypB6o1IQRARaAfBFGCkl0OMqnq1_ibmzLBTY7tJ2FAwBaDBzdj1kIvNKA)
 
-- [Chu, D. K., Akl, E. A., Duda, S., Solo, K., Yaacoub, S., Schünemann, H. J., ... & Hajizadeh, A. (2020). Physical distancing, face masks, and eye protection to prevent person-to-person transmission of SARS-CoV-2 and COVID-19: a systematic review and meta-analysis. The Lancet.] (https://doi.org/10.1016/S0140-6736(20)31142-9)
+- [Chu, D. K., Akl, E. A., Duda, S., Solo, K., Yaacoub, S., Schünemann, H. J., ... & Hajizadeh, A. (2020). Physical distancing, face masks, and eye protection to prevent person-to-person transmission of SARS-CoV-2 and COVID-19: a systematic review and meta-analysis. The Lancet.](https://doi.org/10.1016/S0140-6736(20)31142-9)
 
-- [D'Orazio, M., Bernardini, G., & Quagliarini, E. (2020). How to restart? An agent-based simulation model towards the definition of strategies for COVID-19" second phase" in public buildings. arXiv preprint arXiv:2004.12927.] (https://arxiv.org/ftp/arxiv/papers/2004/2004.12927.pdf)
+- [D'Orazio, M., Bernardini, G., & Quagliarini, E. (2020). How to restart? An agent-based simulation model towards the definition of strategies for COVID-19" second phase" in public buildings. arXiv preprint arXiv:2004.12927.](https://arxiv.org/ftp/arxiv/papers/2004/2004.12927.pdf)
 
-- [Fang, Z., Huang, Z., Li, X., Zhang, J., Lv, W., Zhuang, L., ... & Huang, N. (2020). How many infections of COVID-19 there will be in the" Diamond Princess"-Predicted by a virus transmission model based on the simulation of crowd flow. arXiv preprint arXiv:2002.10616.] (https://arxiv.org/ftp/arxiv/papers/2002/2002.10616.pdf)
+- [Fang, Z., Huang, Z., Li, X., Zhang, J., Lv, W., Zhuang, L., ... & Huang, N. (2020). How many infections of COVID-19 there will be in the" Diamond Princess"-Predicted by a virus transmission model based on the simulation of crowd flow. arXiv preprint arXiv:2002.10616.](https://arxiv.org/ftp/arxiv/papers/2002/2002.10616.pdf)
 
-- [Jarvis, C. I., Van Zandvoort, K., Gimma, A., Prem, K., Klepac, P., Rubin, G. J., & Edmunds, W. J. (2020). Quantifying the impact of physical distance measures on the transmission of COVID-19 in the UK. BMC medicine, 18, 1-10.] (https://link.springer.com/content/pdf/10.1186/s12916-020-01597-8.pdf) 
+- [Jarvis, C. I., Van Zandvoort, K., Gimma, A., Prem, K., Klepac, P., Rubin, G. J., & Edmunds, W. J. (2020). Quantifying the impact of physical distance measures on the transmission of COVID-19 in the UK. BMC medicine, 18, 1-10.](https://link.springer.com/content/pdf/10.1186/s12916-020-01597-8.pdf) 
 
-- [Lee, J. M. (2020, November 10). What Fans Need to Know for UCF's 2020 Football Season: University of Central Florida News. Retrieved December 10, 2020] (https://www.ucf.edu/news/what-fans-need-to-know-for-ucfs-2020-football-season/)
+- [Lee, J. M. (2020, November 10). What Fans Need to Know for UCF's 2020 Football Season: University of Central Florida News. Retrieved December 10, 2020](https://www.ucf.edu/news/what-fans-need-to-know-for-ucfs-2020-football-season/)
 
-- [Murschel, M. (2020, July 24). UCF cuts athletic budgets by 10%, seeks donors to offset COVID-19 losses. Retrieved December 10, 2020] (https://www.orlandosentinel.com/sports/ucf-knights/os-sp-ucf-athletics-budget-fundraising-20200723-uxpaa6gjlffmpdfpoc6jikag4m-story.html)
+- [Murschel, M. (2020, July 24). UCF cuts athletic budgets by 10%, seeks donors to offset COVID-19 losses. Retrieved December 10, 2020](https://www.orlandosentinel.com/sports/ucf-knights/os-sp-ucf-athletics-budget-fundraising-20200723-uxpaa6gjlffmpdfpoc6jikag4m-story.html)
 
-- [Ronald, N., Sterling, L., & Kirley, M. (2007). An agent-based approach to modelling pedestrian behaviour. International Journal of Simulation, 8(1), 25-38.] (https://researchbank.swinburne.edu.au/items/efd6d789-13dd-498f-afe7-2d7cab4ccfcf/1/PDF%20%28Published%20version%29.pdf?.vi=save)
+- [Ronald, N., Sterling, L., & Kirley, M. (2007). An agent-based approach to modelling pedestrian behaviour. International Journal of Simulation, 8(1), 25-38.](https://researchbank.swinburne.edu.au/items/efd6d789-13dd-498f-afe7-2d7cab4ccfcf/1/PDF%20%28Published%20version%29.pdf?.vi=save)
 
-- [Siyam, N., Alqaryouti, O., & Abdallah, S. (2019). Research Issues in Agent-Based Simulation for Pedestrians Evacuation. IEEE Access, 8, 134435-134455.] (https://ieeexplore.ieee.org/iel7/6287639/8948470/08918039.pdf)
+- [Siyam, N., Alqaryouti, O., & Abdallah, S. (2019). Research Issues in Agent-Based Simulation for Pedestrians Evacuation. IEEE Access, 8, 134435-134455.](https://ieeexplore.ieee.org/iel7/6287639/8948470/08918039.pdf)
 
-- [USA Today. (2020, July 05). Methodology for 2019 NCAA athletic department revenue database. Retrieved December 10, 2020] (https://sports.usatoday.com/2020/07/05/methodology-for-2019-ncaa-athletic-department-revenue-database/)
+- [USA Today. (2020, July 05). Methodology for 2019 NCAA athletic department revenue database. Retrieved December 10, 2020](https://sports.usatoday.com/2020/07/05/methodology-for-2019-ncaa-athletic-department-revenue-database/)
 
-- [Wiersinga, W. J., Rhodes, A., Cheng, A. C., Peacock, S. J., & Prescott, H. C. (2020). Pathophysiology, transmission, diagnosis, and treatment of coronavirus disease 2019 (COVID-19): a review. Jama, 324(8), 782-793.] (https://jamanetwork.com/journals/jama/fullarticle/2768391)
+- [Wiersinga, W. J., Rhodes, A., Cheng, A. C., Peacock, S. J., & Prescott, H. C. (2020). Pathophysiology, transmission, diagnosis, and treatment of coronavirus disease 2019 (COVID-19): a review. Jama, 324(8), 782-793.](https://jamanetwork.com/journals/jama/fullarticle/2768391)
