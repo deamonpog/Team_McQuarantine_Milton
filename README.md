@@ -112,6 +112,7 @@ The primary goal of the UCF Football Game Attendance was to accurately model the
 stadium was selected to provide the base of the model.
 
 ![UCF Football Stadium](Images/StadiumBaseMap.png)
+
 [image credit: [ucfknights.com](https://ucfknights.com/sports/2018/10/30/211778281.aspx) ]
 
 To create high spacial fidelity, the research team conducted a survey of the stadium. The survey was used to confirm the map scale and record measurements
@@ -123,6 +124,7 @@ To observe and model UCF football game COVID mitigation strategies, the survey t
 The team observed the stadium at 25% capacity with mandatory seat spacing.
 
 ![COVID home game](Images/SocialDistancing.png)
+
 [image credit: [www.clickorlando.com](https://www.clickorlando.com/news/local/2020/10/04/ucf-knights-play-tulsa-with-new-coronavirus-rules-for-fans/) ]
 
 Using AnyLogic software, the research team created a to-scale model of the UCF football stadium student section. ![Stadium Model](Images/stadiummodel.png)
