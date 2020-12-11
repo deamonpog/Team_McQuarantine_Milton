@@ -5,7 +5,7 @@
 > * Group participants names: Chathura Don Dimungu Arachchige, Bradley Brown, Devin Inthavongsa, and Mathew Rubio
 > * Project Title: Assessing UCF Football Stadium COVID Mitigation Strategies
 
-## 1. Topic / Introduction
+## 1. Introduction
 
 While health and science professionals continue to understand the nuances of COVID epidemiology, certain mitigation strategies appear to be successful in significantly reducing transmission.
 As research continues, governing bodies in the form of national, state, local, education, military, and business are enacting different mitigation efforts based on balancing risk and economic need.
@@ -18,7 +18,7 @@ To retain some spectator revenue, UCF plans to fill 25% (no more than 11 thousan
 
 The **purpose** of the research is to determine is UCF football game attendance COVID countermeasures are appropriate in minimizing virus spread potential while maximizing attendance revenue. Using an agent-based model,  the study will determine predicted COVID transmission under current UCF athletics countermeasures and investigate  higher attendance numbers under current mitigation strategies to determine if higher attendance is possible with nominal risk.
 
-## 3. Related Work/Review
+## 3. Related Work
 
 Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) causes COVID-19, and its mechanism of spreading is primarily driven through close person-to-person interaction. Ongoing studies and analyses of previous epidemiological data are currently underway in predicting the infection mechanism and rate of SARS-CoV-2. It is not definitely known if SARS-CoV-2 might spread through aerosols from respiratory droplets so far; sampling the air has found viral replicative material (viral RNA) in some studies, but not in others. However, finding viral RNA is not necessarily indicative of the virus' replicative and infective potential. Furthermore, the distance from which an infected individual infects another individual, as well as the optimal person-to-person physical distance, is uncertain. Because of such, quantitative assessment of physical distancing is essential in determining safe interaction in healthcare settings, non-healthcare settings, and providing important information for health policy-makers in preventing the spread of the virus.
 
