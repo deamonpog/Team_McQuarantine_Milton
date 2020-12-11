@@ -228,7 +228,7 @@ Capacity can be increased without significant a transmission risk increase. Belo
 During the observational research, it was noted that there were no entry temperature checks and mask wearing in the stand was not enforced.
 Reducing both the initial infected value and the probability of Ro transmission will reduce overall exposure risk  
 
-### 6.1 Future Research
+### 6.2 Future Research
 
 COVID Aerosol Modeling
   - This presentation lightly touched on Aerosol research and its contributions to the emission of respiratory particles. Deriving data from current literature and upcoming experiments related to aerosol research can be used for modeling in future projects. Our simulation highlights the effects of social distancing and other similar policies, but not the aerosol SARS-CoV-2 droplets that can remain in the air and potentially influence the infection/exposure rates, especially taking into account of individuals who do not wear face masks nor practice social distancing.
@@ -242,7 +242,7 @@ Unidirectional Traffic Pattern Efficacy
 Bigger Scale (Whole Stadium, adding more behaviors)
  - This simulation focused on the first quarter of the game, including people entering to the stadium and looking for their seats.  Further research should look into simulating the whole game and add more behaviors such as using the restroom and getting food.  In addition, it will be interesting to see the effect that weather has on the spread of the virus.  
  
- ### 6.2 Conclusion
+ ### 6.3 Conclusion
  
  Overall, the 25% attendance capacity limit is an appropriate approximation to mitigate COVID transmission
  with limited data or research. As COVID research continues, it appears that contact time is the prevalent factor in 
