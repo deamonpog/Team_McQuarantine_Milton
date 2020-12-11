@@ -229,17 +229,17 @@ Reducing both the initial infected value and the probability of Ro transmission 
 ### 6.1 Future Research
 
 COVID Aerosol Modeling
-  -This presentation lightly touched on Aerosol research and its contributions to the emission of respiratory particles. Deriving data from current literature and upcoming experiments related to aerosol research can be used for modeling in future projects. Our simulation highlights the effects of social distancing and other similar policies, but not the aerosol SARS-CoV-2 droplets that can remain in the air and potentially influence the infection/exposure rates, especially taking into account of individuals who do not wear face masks nor practice social distancing.
+  - This presentation lightly touched on Aerosol research and its contributions to the emission of respiratory particles. Deriving data from current literature and upcoming experiments related to aerosol research can be used for modeling in future projects. Our simulation highlights the effects of social distancing and other similar policies, but not the aerosol SARS-CoV-2 droplets that can remain in the air and potentially influence the infection/exposure rates, especially taking into account of individuals who do not wear face masks nor practice social distancing.
 
 Seat Spacing Optimization
+ - As noticed in the model, the way UCF is managing seat spacing is not the most efficient way.  As the simulation proved, it is very easy to get exposed to the virus if an infected agent is sitting on the front or back.  Being able to simulate different seating strategies its definitely something to be consider on future research.
 
 Unidirectional Traffic Pattern Efficacy
+ - Unfortunately, UCF did not have any plan to manage pedestrian flow. After they entered the stadium they were free to roam around and go wherever they wanted, maximizing the exposure to the virus.  Future research should look into efficient ways to direct traffic while keeping the pedestrian flow moving smoothly.
 
 Bigger Scale (Whole Stadium, adding more behaviors)
-
-Implement Weather Conditions (rain vs. sunny weather, etc.)
-
-
+ - This simulation focused on the first quarter of the game, including people entering to the stadium and looking for their seats.  Further research should look into simulating the whole game and add more behaviors such as using the restroom and getting food.  In addition, it will be interesting to see the effect that weather has on the spread of the virus.  
+ 
 ## References
 
 - [Bouchnita, A., & Jebrane, A. (2020). A hybrid multi-scale model of COVID-19 transmission dynamics to assess the potential of non-pharmaceutical interventions. Chaos, Solitons & Fractals, 109941.](https://www.sciencedirect.com/science/article/pii/S0960077920303404?casa_token=It_NawpEwfUAAAAA:yOCsDOdT_8y1PFQ2cypB6o1IQRARaAfBFGCkl0OMqnq1_ibmzLBTY7tJ2FAwBaDBzdj1kIvNKA)
