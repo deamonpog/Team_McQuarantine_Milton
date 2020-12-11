@@ -240,6 +240,21 @@ Unidirectional Traffic Pattern Efficacy
 Bigger Scale (Whole Stadium, adding more behaviors)
  - This simulation focused on the first quarter of the game, including people entering to the stadium and looking for their seats.  Further research should look into simulating the whole game and add more behaviors such as using the restroom and getting food.  In addition, it will be interesting to see the effect that weather has on the spread of the virus.  
  
+ ### 6.2 Conclusion
+ 
+ Overall, the 25% attendance capacity limit is an appropriate approximation to mitigate COVID transmission
+ with limited data or research. As COVID research continues, it appears that contact time is the prevalent factor in 
+ transmission. Even at 25% capacity, the current UCF football mitigation strategies to not leverage the full advantage 
+ of a lower capacity due to seat gap layout. Based on our findings, UCF could increase capacity to between 24% and 50% by enforcing the
+ seat pattern below on the left (2 row vertical gap) when compared to the current seat gap strategy on the right.
+ 
+ ![seat gap strategy](Images/seatpattern.png).
+ 
+ This small change alone could increase the capacity to 35% without changing any other mitigation strategies, which could earn
+ the UCF Athletic program an additional ~ $1,200,000 in ticket sales revenue over the course of a football season. Applying group size strategies and unidirectional movement
+ could allow for an even higher attendance capacity, up to 50%, with negligible increase in transmission risk.        
+ 
+ 
 ## References
 
 - [Bouchnita, A., & Jebrane, A. (2020). A hybrid multi-scale model of COVID-19 transmission dynamics to assess the potential of non-pharmaceutical interventions. Chaos, Solitons & Fractals, 109941.](https://www.sciencedirect.com/science/article/pii/S0960077920303404?casa_token=It_NawpEwfUAAAAA:yOCsDOdT_8y1PFQ2cypB6o1IQRARaAfBFGCkl0OMqnq1_ibmzLBTY7tJ2FAwBaDBzdj1kIvNKA)
