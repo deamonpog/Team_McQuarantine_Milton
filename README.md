@@ -1,9 +1,9 @@
-# Research Practicum 2020: Research Plan
+# Research Practicum 2020: Assessing UCF Football Stadium COVID Mitigation Strategies
 
 
 > * Group Name: Team McQuarantine Milton
 > * Group participants names: Chathura Don Dimungu Arachchige, Bradley Brown, Devin Inthavongsa, and Mathew Rubio
-> * Project Title: UCF 2020 Football Season Home Game Spectator COVD Transmission
+> * Project Title: Assessing UCF Football Stadium COVID Mitigation Strategies
 
 ## 1. Topic / Introduction
 
