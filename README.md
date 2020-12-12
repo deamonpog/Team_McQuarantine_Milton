@@ -33,18 +33,17 @@ Jarvis et al. (2020) published a paper centered around the estimation of 'R naug
 ### Overview
 The methodology seeks to establish the baseline COVID transmission risk with current attendee mitigation strategies (25% capacity, zone segregation). Followed by testing to identify at what attendance threshold and combination of mitigation strategies allow for increased home game attendance without increasing COVID transmission risk.
 
-The participants for our experiment are simulated football game attendees using anylogic. One mitigation strategy for UCF home games is segregating the stadium into seven unilateral sections that cannot interact with each other, which means that each section has its own entry/exit, bathrooms, and concessions. Our population consists of 25% capacity of one such section, a total of 1,618 simulated spectators. We may increase the simulated population depending upon our capability to increase the simulation scope as we continue to build the model. The simulation agents are unique to our study in two ways. First, the agents will have a 6 ft. boundary around each that will help us measure the number of contacts each agent has with other agents. Second, the agents will be capable of being a part of different sized groups, a transmission variable we plan to test.  
+The participants for our experiment are simulated football game attendees using anylogic. One mitigation strategy for UCF home games is segregating the stadium into seven unilateral sections that cannot interact with each other, which means that each section has its own entry/exit, bathrooms, and concessions. Our population consists of the capacity of one such section, up to a total of 1,342 simulated spectators. The simulation agents are unique to our study in two ways. First, the agents will have a 6 ft. boundary around each that will help us measure the number of contacts each agent has with other agents. Second, the agents will be capable of being a part of different sized groups, a transmission variable we plan to test.  
 
-Our primary tool is anylogic. We plan to construct an agent-based simulation that allows us to adjust the population, movement patterns, and group sizes. The primary output of our agent base simulation is to identify the number of contacts between unique agents. The agent contact data will inform the Ro value in a separate SIR simulation to provide infection statistics under changing variables.  
+Our primary tool is AnyLogic. We constructed an agent-based simulation that allows us to adjust the population, movement patterns, and group sizes. The primary output of our agent base simulation is to identify the number of contacts and contact times between unique agents.  
 
-The dependent variables for our experiment are the number of agent contacts and attendee infection rate. Independent variables are the attendance capacity and attendee group sizes. Our control variable is mask wearing as a function of Ro. A draft table of our experiment framework is below.
+The dependent variables for our experiment are the number of agent contacts and attendee infection rate. Independent variables are the attendance capacity and attendee group sizes. Parameter variations are summarized in the table below.
 
 ![results table](Images/resultstable.png)
 
-The experiment process follows the table above. Data will be collected using anylogic analytics and include agent contact statistics and infection statistics based on research-informed
-Ro values and the initial value of the SIR infection.
-The final phase to the experiment that finds the optimal attendance capacity and group size limitations that maximizes COVID attendance
-with minimal increase in infection rates.
+The experiment process follows the table above. Data will be collected using anylogic and include agent contact statistics and infection statistics based on research-informed
+Ro values and the initial value of the SIR infection. Data Analysis will be conducted in RStudio.
+
 
 ### 4.1 Reseach Questions
 
