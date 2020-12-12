@@ -203,14 +203,14 @@ while seated was significantly higher than walking.
 ![Rplot6](Images/Rplot05.png)
 
 ### 5.5 Putting it Together
-Overall higher attendance capacity positively correlated with elevated exposures. However, agents contacts, or risk of transmission remained flat
+Overall, higher attendance capacity positively correlated with elevated exposures. However, agents contacts, or risk of transmission remained flat
 from 25%-75% at group sizes 6 or below. Additionally, contact time between group sizes 4 through 6 remained
 similar before a significant increase in group sizes 7 or above. Walking saw a greater number and diversity of short duration contacts,
 while sitting significantly extended contact time, however, with a lower number and diversity of contacts.
 
 ## 6. Recommendations and Future Research
 ### 6.1 Recommendations
-Capacity can be increased without significant a transmission risk increase. Below are recommendations to to limit both the number and duration of contacts, and therefore, reduce transmission risk.
+Capacity can be increased without significant a transmission risk increase. Below are recommendations to limit both the number and duration of contacts, and therefore, reduce transmission risk.
 
 ##### 1. Limit diversity of contacts.
 * Stadium Entrance "Boarding Groups" to limit the funnel effect of limited entry points at specified times
